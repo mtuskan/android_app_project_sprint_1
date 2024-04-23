@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Project Sprint 1 - Group 9</string>
+    <string name="about">About</string>
+    <string name="resources">Resources</string>
+    <string name="university_of_washington_tacoma_logo">University of Washington Tacoma Logo</string>
+    <string name="dawgstecssuport">DawgsTeCSSuport</string>
 </resources>
