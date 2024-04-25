@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Project Sprint 1 - Group 9</string>
 
-   <string name="button_resource"> Resources</string>
+    <string name="button_resource"> Resources</string>
     <string name="button_study_tips"> Study Tips</string>
     <string name="button_clubs"> Student Clubs</string>
     <string name="button_leetcode"> LeetCode</string>
