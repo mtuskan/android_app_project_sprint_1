@@ -10,7 +10,7 @@
     <string name="textview_title"> Student CS resources</string>
     <!-- strings for the career fragment -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="career_description_textview">This section will help with fidning some key resouces when it comes to finding a career in computer science during your time in undergrad.</string>
+    <string name="career_description_textview">This section will help with finding some key resources when it comes to finding a career in computer science during your time in undergrad.</string>
     <string name="career_tips_title_textview">Career Tips</string>
     <string name="career_bulleted_list">
     \u2022 Research about Grad School\n
