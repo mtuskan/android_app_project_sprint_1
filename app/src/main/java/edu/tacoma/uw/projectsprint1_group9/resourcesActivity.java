@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,21 +23,73 @@ public class resourcesActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-//        findViewById(R.id.buttonStudentResources).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getApplicationContext(), MyInfo.class);
-//                startActivity(intent);
-//            }
-//        });
 
-//        findViewById(R.id.buttonStudentResources).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent2 = new Intent(getApplicationContext(), MyImage.class);
-//                startActivity(intent2);
-//            }
-//        });
+        findViewById(R.id.buttonHome).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+
+        findViewById(R.id.buttonCareer).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Hide the views
+                    findViewById(R.id.textViewResource).setVisibility(View.GONE);
+                    findViewById(R.id.buttonStudentResources).setVisibility(View.GONE);
+                    findViewById(R.id.buttonStudentClubs).setVisibility(View.GONE);
+                    findViewById(R.id.buttonStudyTips).setVisibility(View.GONE);
+                    findViewById(R.id.buttonLeetCode).setVisibility(View.GONE);
+                    findViewById(R.id.buttonCareer).setVisibility(View.GONE);
+
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.main, new CareerFragment())
+                            .addToBackStack(null)
+                            .commit();
+                }
+            });
+
+
+        findViewById(R.id.buttonStudentResources).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Hide the views
+                    findViewById(R.id.textViewResource).setVisibility(View.GONE);
+                    findViewById(R.id.buttonStudentResources).setVisibility(View.GONE);
+                    findViewById(R.id.buttonStudentClubs).setVisibility(View.GONE);
+                    findViewById(R.id.buttonStudyTips).setVisibility(View.GONE);
+                    findViewById(R.id.buttonLeetCode).setVisibility(View.GONE);
+                    findViewById(R.id.buttonCareer).setVisibility(View.GONE);
+
+
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.main, new GeneralResourceFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        findViewById(R.id.buttonStudentClubs).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Hide the views
+                findViewById(R.id.textViewResource).setVisibility(View.GONE);
+                findViewById(R.id.buttonStudentResources).setVisibility(View.GONE);
+                findViewById(R.id.buttonStudentClubs).setVisibility(View.GONE);
+                findViewById(R.id.buttonStudyTips).setVisibility(View.GONE);
+                findViewById(R.id.buttonLeetCode).setVisibility(View.GONE);
+                findViewById(R.id.buttonCareer).setVisibility(View.GONE);
+
+
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.main, new clubsFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+
 
         findViewById(R.id.buttonLeetCode).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,32 +101,7 @@ public class resourcesActivity extends AppCompatActivity {
 
         });
 
-//        findViewById(R.id.buttonStudentClubs).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                CharSequence text = "The image is my cat Anubis";
-//                int duration = Toast.LENGTH_SHORT;
-//
-//                Toast toast = Toast.makeText(view.getContext(), text, duration);
-//                toast.show();
-//            }
-//        });
-
-//        findViewById(R.id.buttonStudyTips).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                CharSequence text = "The image is my cat Anubis";
-//                int duration = Toast.LENGTH_SHORT;
-//
-//                Toast toast = Toast.makeText(view.getContext(), text, duration);
-//                toast.show();
-//            }
-//        });
-
 
 
     }
-
-
-
 }
