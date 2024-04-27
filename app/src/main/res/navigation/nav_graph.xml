@@ -23,5 +23,10 @@
         android:id="@+id/resourceFragment"
         android:name="edu.tacoma.uw.projectsprint1_group9.GeneralResourceFragment"
         android:label="ResourceFragment" />
+    <fragment
+        android:id="@+id/clubsFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.clubsFragment"
+        android:label="fragment_clubs"
+        tools:layout="@layout/fragment_clubs" />
 
 </navigation>

@@ -28,7 +28,7 @@
     <string name="linkCareer">https://www.tacoma.uw.edu/career</string>
     <string name="intro_resources">Intro</string>
 
-   <!-- Names of the navigation buttons -->
+    <!-- Names of the navigation buttons -->
     <string name="home_button_text">Home</string>
     <string name="resources_button_text">Resources</string>
 
@@ -56,6 +56,14 @@
 
     </string>
     <string name="links">Links</string>
+    <string name="women_in_computer_science">Women In Computer Science</string>
+    <string name="ux_ui">UX/UI</string>
+    <string name="programming_project">Programming Project</string>
+    <string name="game_development">Game Development</string>
+    <string name="ieee">IEEE</string>
+    <string name="huscii_developers">HUSCII Developers</string>
+    <string name="student_clubs">Student Clubs</string>
+    <string name="logo">Logo</string>
 
 
 </resources>

@@ -62,6 +62,25 @@ public class resourcesActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.buttonStudentClubs).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Hide the views
+                findViewById(R.id.textViewResource).setVisibility(View.GONE);
+                findViewById(R.id.buttonStudentResources).setVisibility(View.GONE);
+                findViewById(R.id.buttonStudentClubs).setVisibility(View.GONE);
+                findViewById(R.id.buttonStudyTips).setVisibility(View.GONE);
+                findViewById(R.id.buttonLeetCode).setVisibility(View.GONE);
+                findViewById(R.id.buttonCareer).setVisibility(View.GONE);
+
+
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.main, new clubsFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
 
 
         findViewById(R.id.buttonLeetCode).setOnClickListener(new View.OnClickListener() {
