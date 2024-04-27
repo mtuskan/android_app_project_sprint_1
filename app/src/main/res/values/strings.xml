@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Project Sprint 1 - Group 9</string>
 
+    <string name="about">About</string>
+    <string name="resources">Resources</string>
+    <string name="university_of_washington_tacoma_logo">University of Washington Tacoma Logo</string>
+    <string name="dawgstecssuport">DawgsTeCSSupport</string>
+
     <string name="button_resource"> Resources</string>
     <string name="button_study_tips"> Study Tips</string>
     <string name="button_clubs"> Student Clubs</string>
@@ -64,6 +69,7 @@
     <string name="huscii_developers">HUSCII Developers</string>
     <string name="student_clubs">Student Clubs</string>
     <string name="logo">Logo</string>
+    <string name="homeRes">Home</string>
 
 
 </resources>

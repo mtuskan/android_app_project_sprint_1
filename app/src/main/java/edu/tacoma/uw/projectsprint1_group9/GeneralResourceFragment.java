@@ -48,6 +48,12 @@ public class GeneralResourceFragment extends Fragment {
             startActivity(intent);
 
         });
+
+        Button homeButton = view.findViewById(R.id.home_button);
+        homeButton.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), MainActivity.class);
+            startActivity(intent);
+        });
     }
 
 

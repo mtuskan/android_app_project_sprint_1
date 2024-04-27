@@ -44,11 +44,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="140dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="100dp"
         android:backgroundTint="#4B2E83"
         android:text="@string/button_clubs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="@+id/buttonLeetCode" />
 
     <Button
@@ -86,5 +87,17 @@
         android:text="@string/button_career"
         app:layout_constraintBottom_toTopOf="@+id/buttonStudentResources"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#4B2E83"
+        android:text="@string/homeRes"
+        app:layout_constraintEnd_toEndOf="@+id/buttonStudentClubs"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toStartOf="@+id/buttonStudentClubs"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStudentClubs" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

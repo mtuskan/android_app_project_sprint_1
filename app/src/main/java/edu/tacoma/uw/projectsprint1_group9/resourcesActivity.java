@@ -24,7 +24,15 @@ public class resourcesActivity extends AppCompatActivity {
             return insets;
         });
 
-            findViewById(R.id.buttonCareer).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.buttonHome).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+
+        findViewById(R.id.buttonCareer).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     // Hide the views
@@ -92,6 +100,8 @@ public class resourcesActivity extends AppCompatActivity {
             }
 
         });
+
+
 
     }
 }
