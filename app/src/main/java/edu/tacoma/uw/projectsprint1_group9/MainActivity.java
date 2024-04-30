@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.ResourcesButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ResourceListActivity.class);
+                Intent intent = new Intent(getApplicationContext(), resourcesActivity.class);
                 startActivity(intent);
             }
         });

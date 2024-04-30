@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/resourcesActivity">
+
+    <activity
+        android:id="@+id/resourcesActivity"
+        android:name="edu.tacoma.uw.projectsprint1_group9.resourcesActivity"
+        android:label="resources_activity">
+        <action
+            android:id="@+id/action_resourcesActivity_to_careerFragment"
+            app:destination="@id/careerFragment" />
+    </activity>
+
+    <fragment
+        android:id="@+id/careerFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.CareerFragment"
+        android:label="fragment_career"
+        tools:layout="@layout/fragment_career" />
+    <fragment
+        android:id="@+id/resourceFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.GeneralResourceFragment"
+        android:label="ResourceFragment" />
+    <fragment
+        android:id="@+id/clubsFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.clubsFragment"
+        android:label="fragment_clubs"
+        tools:layout="@layout/fragment_clubs" />
+
+</navigation>

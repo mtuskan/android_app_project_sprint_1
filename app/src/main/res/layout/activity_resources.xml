@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".resourcesActivity">
+
+    <TextView
+        android:id="@+id/textViewResource"
+        android:layout_width="268dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/encode_sans_condensed_black"
+        android:text="@string/textview_title"
+        android:textAlignment="center"
+        android:textColor="#4B2E83"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCareer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.244" />
+
+    <Button
+        android:id="@+id/buttonStudentResources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#4B2E83"
+        android:text="@string/button_resource"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStudyTips"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/buttonCareer" />
+
+    <Button
+        android:id="@+id/buttonStudentClubs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#4B2E83"
+        android:text="@string/button_clubs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="@+id/buttonLeetCode" />
+
+    <Button
+        android:id="@+id/buttonStudyTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#4B2E83"
+        android:text="@string/button_study_tips"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLeetCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/buttonStudentResources" />
+
+    <Button
+        android:id="@+id/buttonLeetCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#4B2E83"
+        android:text="@string/button_leetcode"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStudentClubs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/buttonStudyTips" />
+
+    <Button
+        android:id="@+id/buttonCareer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#4B2E83"
+        android:onClick="onClickCareer"
+        android:text="@string/button_career"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStudentResources"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#4B2E83"
+        android:text="@string/homeRes"
+        app:layout_constraintEnd_toEndOf="@+id/buttonStudentClubs"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toStartOf="@+id/buttonStudentClubs"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStudentClubs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

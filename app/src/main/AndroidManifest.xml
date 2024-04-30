@@ -16,7 +16,7 @@
             android:name=".AboutInformationActivity"
             android:exported="false" />
         <activity
-            android:name=".ResourceListActivity"
+            android:name=".resourcesActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
