@@ -22,7 +22,7 @@
         app:layout_constraintBottom_toTopOf="@+id/EmailView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AboutView" />
+        app:layout_constraintTop_toBottomOf="@+id/studyTipsView" />
 
     <TextView
         android:id="@+id/EmailView"
@@ -119,7 +119,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/AboutView"
+        android:id="@+id/studyTipsView"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginStart="29dp"
