@@ -1,6 +1,7 @@
 package edu.tacoma.uw.projectsprint1_group9;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -35,6 +36,33 @@ public class AboutActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.jamesEmailAddress).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri webpage = Uri.parse("mailto:jjl336@uw.edu");
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.enriqueEmailAddress).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri webpage = Uri.parse("mailto:enriquev@uw.edu");
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.michaelEmailAddress).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri webpage = Uri.parse("mailto:mtuskan@uw.edu");
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
                 startActivity(intent);
             }
         });
