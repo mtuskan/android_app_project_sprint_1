@@ -23,6 +23,6 @@ Working Features:
 
 Work-in-Progress Features: 
 
-    - Study Tips Button in (Resources Activity): -Might crash application
+    - Study Tips Button in (Resources Activity)
     - Pre-Homepage user registration and login: will be available in sprint 2.
-    - Connect backend to front end (URL)
+
