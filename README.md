@@ -17,6 +17,10 @@ Working Features:
     - Student Clubs Button: URL links for UWT student clubs.
     - Home Button: Redirects back to the home page.
 
+   Graphic Design:
+	
+    - Finished icon for the app and a logo specific to DawgsTeCSSuport design aesthetic. 
+
 Work-in-Progress Features: 
 
     - Study Tips Button in (Resources Activity): -Might crash application
