@@ -75,4 +75,11 @@
     <string name="jamesEmail"><a href="mailto:jjl336@uw.edu">jjl336@uw.edu</a></string>
     <string name="enriqueEmail"><a href="mailto:enriquev@uw.edu">enriquev@uw.edu</a></string>
     <string name="michaelEmail"><a href="mailto:mtuskan@uw.edu">mtuskan@uw.edu</a></string>
+    <string name="submitFeedback">Submit!</string>
+    <string name="enter_name_feedback">Enter Name:</string>
+    <string name="enter_year_feedback">Enter Year: (ex: Senior)</string>
+    <string name="feedback_goes_here">Feedback goes here!</string>
+    <string name="feedback_title">Leave a Review of App</string>
+    <string name="app_logo_feedback">App logo</string>
+    <string name="feedback">Feedback</string>
 </resources>
