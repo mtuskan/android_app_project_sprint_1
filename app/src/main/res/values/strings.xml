@@ -75,4 +75,17 @@
     <string name="jamesEmail"><a href="mailto:jjl336@uw.edu">jjl336@uw.edu</a></string>
     <string name="enriqueEmail"><a href="mailto:enriquev@uw.edu">enriquev@uw.edu</a></string>
     <string name="michaelEmail"><a href="mailto:mtuskan@uw.edu">mtuskan@uw.edu</a></string>
+    <string name="register">Register</string>
+
+    <string name="email_hint">Enter your email</string>
+    <string name="pwd_hint">Enter your password</string>
+    <string name="register_text">REGISTER</string>
+
+    <string name="login_text">LOGIN</string>
+    <string name="register_navigate_text">Click here to Register!</string>
+
+    <string name="LOGIN_PREFS">edu.tacoma.uw.mtuskan.projectsprint1_group9.PREFS</string>
+    <string name="LOGGEDIN">loggedin</string>
+
+    <string name="action_logout">logout</string>
 </resources>
