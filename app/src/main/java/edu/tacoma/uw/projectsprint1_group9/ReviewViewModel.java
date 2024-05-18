@@ -27,7 +27,7 @@ import java.util.Objects;
 public class ReviewViewModel extends AndroidViewModel {
     private MutableLiveData<JSONObject> mResponse;
 
-    private MutableLiveData<List<Reviews>> mReviewsList;
+    private MutableLiveData<List<Feedback>> mReviewsList;
 
     public ReviewViewModel(@NonNull Application application) {
         super(application);
@@ -93,8 +93,8 @@ public class ReviewViewModel extends AndroidViewModel {
                 .add(request);
     }
 
-    public void addReviewListObserver(@NonNull LifecycleOwner owner,
-                                      @NonNull Observer<? super List<Reviews>> observer) {
+    public void addFeedbackListObserver(@NonNull LifecycleOwner owner,
+                                        @NonNull Observer<? super List<Feedback>> observer) {
         mReviewsList.observe(owner, observer);
     }
 
@@ -104,7 +104,7 @@ public class ReviewViewModel extends AndroidViewModel {
             JSONArray arr = new JSONArray(data);
             for (int i = 0; i < arr.length(); i++) {
                 JSONObject obj = arr.getJSONObject(i);
-                Reviews review = new Reviews(obj.getString(Reviews.NAME), obj.getString(Reviews.YEAR), obj.getString(Reviews.FEEDBACK));
+                Feedback review = new Feedback(obj.getString(Feedback.NAME), obj.getString(Feedback.YEAR), obj.getString(Feedback.FEEDBACK));
                 mReviewsList.getValue().add(review);
             }
 

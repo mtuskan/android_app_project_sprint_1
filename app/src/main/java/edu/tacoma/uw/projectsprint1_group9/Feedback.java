@@ -2,7 +2,7 @@ package edu.tacoma.uw.projectsprint1_group9;
 
 import java.io.Serializable;
 
-public class Reviews implements Serializable {
+public class Feedback implements Serializable {
 
     private String mNames;
     private String mYear;
@@ -12,7 +12,7 @@ public class Reviews implements Serializable {
     public final static String YEAR = "year";
     public final static String FEEDBACK = "feedback";
 
-    public Reviews(String name, String year, String feedback) {
+    public Feedback(String name, String year, String feedback) {
         mNames = name;
         mYear = year;
         mFeedback = feedback;
