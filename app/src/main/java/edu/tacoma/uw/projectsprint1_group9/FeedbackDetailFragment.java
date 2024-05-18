@@ -30,6 +30,7 @@ public class FeedbackDetailFragment extends Fragment {
         return mBinding.getRoot();
 
     }
+    //error
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
