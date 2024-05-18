@@ -40,5 +40,6 @@ public class FeedbackDetailFragment extends Fragment {
         mBinding.nameTextView.setText(feedback.getName());
         mBinding.yearTextView.setText(feedback.getYear());
         mBinding.feedbackTextView.setText(feedback.getFeedback());
+
     }
 }
