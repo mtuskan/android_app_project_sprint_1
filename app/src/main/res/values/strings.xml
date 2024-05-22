@@ -11,6 +11,7 @@
     <string name="button_clubs"> Student Clubs</string>
     <string name="button_leetcode"> LeetCode</string>
     <string name="button_career"> Career Tips</string>
+    <string name="home"> Home</string>
 
     <string name="textview_title"> Student CS resources</string>
     <!-- strings for the career fragment -->
