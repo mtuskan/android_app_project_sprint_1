@@ -53,19 +53,16 @@ public class AddFeedbacksFragment extends Fragment {
 
         });
 
-        mBinding.buttonAddFeedback.setOnClickListener(button -> processAddAnimal());
+        mBinding.buttonAddFeedback.setOnClickListener(button -> processAddFeedback());
 
         Button homeButton = view.findViewById(R.id.HomeButton);
         homeButton.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), MainActivity.class);
             startActivity(intent);
         });
-
-
-
     }
 
-    private void processAddAnimal() {
+    private void processAddFeedback() {
 
         final String name = mBinding.editTextName.getText().toString();
 
