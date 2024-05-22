@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import org.jetbrains.annotations.Nullable;
 
-import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentFeedbackDetail2Binding;
+import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentFeedbackDetailBinding;
 
 /**
 
@@ -21,12 +21,12 @@ import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentFeedbackDetail2Bi
  */
 public class FeedbackDetailFragment extends Fragment {
 
-    private FragmentFeedbackDetail2Binding mBinding;
+    private FragmentFeedbackDetailBinding mBinding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mBinding = FragmentFeedbackDetail2Binding.inflate(inflater, container, false);
+        mBinding = FragmentFeedbackDetailBinding.inflate(inflater, container, false);
         return mBinding.getRoot();
 
     }
@@ -37,7 +37,7 @@ public class FeedbackDetailFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         //Get a reference to the SafeArgs object
         FeedbackDetailFragmentArgs args = FeedbackDetailFragmentArgs.fromBundle(getArguments());
-        Feedback feedback = (Feedback) args.getReviews();
+        Feedback feedback = (Feedback) args.getFeedback();
         mBinding.nameTextView.setText(feedback.getName());
         mBinding.yearTextView.setText(feedback.getYear());
         mBinding.feedbackTextView.setText(feedback.getFeedback());

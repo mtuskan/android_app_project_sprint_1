@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/resourcesActivity">
+    app:startDestination="@id/feedbackListFragment">
 
     <activity
         android:id="@+id/resourcesActivity"
@@ -19,10 +19,6 @@
         android:name="edu.tacoma.uw.projectsprint1_group9.CareerFragment"
         android:label="fragment_career"
         tools:layout="@layout/fragment_career" />
-    <fragment
-        android:id="@+id/resourceFragment"
-        android:name="edu.tacoma.uw.projectsprint1_group9.GeneralResourceFragment"
-        android:label="ResourceFragment" />
     <fragment
         android:id="@+id/clubsFragment"
         android:name="edu.tacoma.uw.projectsprint1_group9.clubsFragment"
@@ -40,9 +36,10 @@
     <fragment
         android:id="@+id/feedbackDetailFragment"
         android:name="edu.tacoma.uw.projectsprint1_group9.FeedbackDetailFragment"
-        android:label="fragment_feedback_detail2"
-        tools:layout="@layout/fragment_feedback_detail2" >
-        <argument android:name="feedback"
+        android:label="fragment_feedback_detail"
+        tools:layout="@layout/fragment_feedback_detail">
+        <argument
+            android:name="feedback"
             app:argType="edu.tacoma.uw.projectsprint1_group9.Feedback" />
     </fragment>
 
