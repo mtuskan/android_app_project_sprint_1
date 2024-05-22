@@ -14,7 +14,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashGreetingsActivity extends AppCompatActivity {
-    private static int SPLASH_SCREEN_TIMEOUT = 4500;
+    private static int SPLASH_SCREEN_TIMEOUT = 7500;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class SplashGreetingsActivity extends AppCompatActivity {
         Animation fadeOut = new AlphaAnimation(1,0);
         fadeOut.setInterpolator(new AccelerateInterpolator());
         fadeOut.setStartOffset(500);
-        fadeOut.setDuration(4500);
+        fadeOut.setDuration(7500);
         ImageView image = findViewById(R.id.dawgsImageView);
         image.setAnimation(fadeOut);
         TextView image2 = findViewById(R.id.helloTextView);
@@ -34,7 +34,7 @@ public class SplashGreetingsActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashGreetingsActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashGreetingsActivity.this, ContainerActivity.class);
                 startActivity(intent);
                 finish();
             }

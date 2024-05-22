@@ -1,24 +1,20 @@
 package edu.tacoma.uw.projectsprint1_group9;
-
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentLoginBinding;
 
 /**
@@ -102,6 +98,9 @@ public class LoginFragment extends Fragment {
                                     , Context.MODE_PRIVATE);
                             sharedPreferences.edit().putBoolean(getString(R.string.LOGGEDIN), true)
                                     .commit();
+                            //start intent to go to mainActivity
+                            Intent intent = new Intent(requireContext(), MainActivity.class);
+                            startActivity(intent);
                         } else {
                             Toast.makeText(this.getContext(), "User failed to authenticate", Toast.LENGTH_LONG).show();
 

@@ -2,71 +2,95 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
+    android:id="@+id/login_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B7A57A"
     tools:context=".LoginFragment">
 
     <EditText
         android:id="@+id/editTextUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="192dp"
+        android:layout_width="175dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Email"
         android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="175dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="1dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FDFCFC"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="232dp" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextUsername"
+        app:layout_constraintStart_toStartOf="@+id/editTextUsername"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="79dp"
         android:layout_height="38dp"
+        android:layout_marginBottom="400dp"
+        android:backgroundTint="#4B2E83"
         android:text="Login"
         android:textSize="10sp"
-        tools:layout_editor_absoluteX="211dp"
-        tools:layout_editor_absoluteY="292dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/registerCallTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
 
     <TextView
         android:id="@+id/registerCallTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="415dp"
         android:clickable="true"
         android:fontFamily="sans-serif"
         android:text="@string/register"
-        android:textColor="#673AB7"
-        android:textSize="10sp"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="302dp" />
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="128dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="152dp"
         android:src="@mipmap/uwlogo_foreground"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="84dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/error_login_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/error_login_textview"
-        android:textColor="@color/design_default_color_error"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/design_default_color_error" />
 </androidx.constraintlayout.widget.ConstraintLayout>

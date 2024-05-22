@@ -88,4 +88,5 @@
     <string name="LOGGEDIN">loggedin</string>
 
     <string name="action_logout">logout</string>
+    <string name="dawgsteccsupport">DawgsTeCCSupport</string>
 </resources>

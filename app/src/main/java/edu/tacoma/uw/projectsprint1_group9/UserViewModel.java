@@ -71,7 +71,7 @@ public class UserViewModel extends AndroidViewModel {
                 mResponse::setValue,
                 this::handleError);
 
-        Log.i("edu.tacoma.uw.authenticationpractice.UserViewModel", request.getUrl().toString());
+        Log.i("edu.tacoma.uw.projectsprint1_group9.UserViewModel", request.getUrl().toString());
         request.setRetryPolicy(new DefaultRetryPolicy(
                 10_000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

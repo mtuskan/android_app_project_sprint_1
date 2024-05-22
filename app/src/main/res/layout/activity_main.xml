@@ -25,10 +25,10 @@
         android:fontFamily="sans-serif"
         android:text="@string/resources"
         android:textColorLink="#4B2E83"
-        app:layout_constraintEnd_toEndOf="@+id/DawgsTeCSSuportTextView"
+        app:layout_constraintEnd_toEndOf="@+id/DawgsTeCCSuportTextView"
         app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="@+id/DawgsTeCSSuportTextView"
-        app:layout_constraintTop_toBottomOf="@+id/DawgsTeCSSuportTextView"
+        app:layout_constraintStart_toStartOf="@+id/DawgsTeCCSuportTextView"
+        app:layout_constraintTop_toBottomOf="@+id/DawgsTeCCSuportTextView"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
 
@@ -60,12 +60,12 @@
         app:srcCompat="@mipmap/uwlogo_round" />
 
     <TextView
-        android:id="@+id/DawgsTeCSSuportTextView"
+        android:id="@+id/DawgsTeCCSuportTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="sans-serif"
-        android:text="@string/dawgstecssuport"
+        android:text="@string/dawgsteccsupport"
         android:textColor="#FFFFFF"
         android:textSize="27sp"
         android:textStyle="bold"
@@ -73,5 +73,15 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/uwLogoImageView"
         app:layout_constraintTop_toBottomOf="@+id/uwLogoImageView" />
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/my_toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="?attr/colorPrimary"-->
+<!--        android:elevation="4dp"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+<!--        tools:ignore="MissingConstraints"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

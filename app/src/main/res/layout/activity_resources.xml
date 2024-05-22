@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B7A57A"
     tools:context=".resourcesActivity">
 
     <TextView
@@ -33,7 +34,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResource" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewResource"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/buttonStudentResources"
@@ -45,7 +48,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCareer" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonCareer"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/buttonStudyTips"
@@ -57,7 +62,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonStudentResources" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonStudentResources"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/buttonLeetCode"
@@ -69,7 +76,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonStudyTips" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonStudyTips"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/buttonStudentClubs"
@@ -81,7 +90,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLeetCode" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLeetCode"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/buttonHome"
@@ -95,6 +106,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonStudentClubs"
-        app:layout_constraintVertical_bias="0.016" />
+        app:layout_constraintVertical_bias="0.016"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
