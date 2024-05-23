@@ -32,12 +32,12 @@
         android:layout_marginBottom="55dp"
         android:src="@drawable/wicsimage"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/uwLogoImageView"
         app:layout_constraintStart_toStartOf="parent"
         android:contentDescription="@string/logo" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/uwLogoImageView"
         android:layout_width="96dp"
         android:layout_height="100dp"
         android:layout_marginEnd="55dp"
@@ -110,7 +110,7 @@
         android:layout_marginBottom="7dp"
         android:fontFamily="@font/open_sans_light"
         android:text="@string/ux_ui"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/uwLogoImageView"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
