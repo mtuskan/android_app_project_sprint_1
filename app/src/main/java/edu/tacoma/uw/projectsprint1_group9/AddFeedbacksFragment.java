@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -60,6 +61,8 @@ public class AddFeedbacksFragment extends Fragment {
             Intent intent = new Intent(requireContext(), MainActivity.class);
             startActivity(intent);
         });
+
+        mBinding.viewFeedbackButton.setOnClickListener(button -> navToFeedbackList());
     }
 
     private void processAddFeedback() {
@@ -70,14 +73,28 @@ public class AddFeedbacksFragment extends Fragment {
 
         final String feedback = mBinding.editTextFeedback.getText().toString();
 
-
+        if (name.isEmpty() || year.isEmpty() || feedback.isEmpty()) {
+            Toast.makeText(getContext(), "All fields must be filled out", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         Log.i(TAG, "Data is " + name + ", " + year + ", " + feedback);
 
         reviewViewModel.addReview(name, year, feedback);
 
+    }
 
+    private void navToFeedbackList() {
 
+        Navigation.findNavController(getView())
+                .navigate(R.id.action_addFeedbacksFragment_to_feedbackListFragment);
+    }
+
+    @Override
+    public void onDestroyView() {
+
+        super.onDestroyView();
+        mBinding = null;
     }
 
     private void observeResponse(final JSONObject response) {

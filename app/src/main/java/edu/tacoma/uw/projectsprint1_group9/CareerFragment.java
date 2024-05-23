@@ -1,13 +1,11 @@
 package edu.tacoma.uw.projectsprint1_group9;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,7 +43,7 @@ public class CareerFragment extends Fragment {
 
         Button backButton = view.findViewById(R.id.back_to_resource);
         backButton.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), resourcesActivity.class);
+            Intent intent = new Intent(requireContext(), ResourcesActivity.class);
             startActivity(intent);
         });
 
