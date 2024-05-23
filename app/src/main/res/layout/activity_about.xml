@@ -29,59 +29,59 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="267dp"
         android:fontFamily="@font/encode_sans_condensed_black"
         android:text="EMAILS"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#4B2E83"
-        app:layout_constraintBottom_toTopOf="@+id/jamesEmailAddress"
-        app:layout_constraintEnd_toStartOf="@+id/jamesEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/namesView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DescriptionView" />
 
-    <TextView
+    <EditText
         android:id="@+id/jamesEmailAddress"
         android:layout_width="131dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="188dp"
-        android:layout_marginBottom="4dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="199dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:singleLine="false"
         android:text="@string/jamesEmail"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/enriqueEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/namesView"
         app:layout_constraintTop_toBottomOf="@+id/EmailView" />
 
-    <TextView
+    <EditText
         android:id="@+id/enriqueEmailAddress"
         android:layout_width="151dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="171dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="179dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="@string/enriqueEmail"
-        app:layout_constraintBottom_toTopOf="@+id/michaelEmailAddress"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/namesView"
         app:layout_constraintTop_toBottomOf="@+id/jamesEmailAddress" />
 
-    <TextView
+    <EditText
         android:id="@+id/michaelEmailAddress"
         android:layout_width="152dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="170dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="169dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="@string/michaelEmail"
-        app:layout_constraintBottom_toTopOf="@+id/ResourcesButton"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/namesView"
         app:layout_constraintTop_toBottomOf="@+id/enriqueEmailAddress" />
@@ -90,34 +90,35 @@
         android:id="@+id/ResourcesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="78dp"
         android:layout_marginBottom="89dp"
         android:backgroundTint="#4B2E83"
         android:fontFamily="@font/open_sans_light"
         android:text="@string/resources_button_text"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/HomeButton"
-        app:layout_constraintTop_toBottomOf="@+id/michaelEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/michaelEmailAddress"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/HomeButton"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginStart="78dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="89dp"
         android:backgroundTint="#4B2E83"
         android:fontFamily="@font/open_sans_light"
         android:text="@string/home_button_text"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ResourcesButton"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.226"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/michaelEmailAddress"
-        app:layout_constraintVertical_bias="0.0" />
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
 
     <TextView
         android:id="@+id/studyTipsView"
@@ -140,14 +141,10 @@
         android:id="@+id/namesView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="165dp"
         android:fontFamily="@font/open_sans_light"
         android:text="James:\n\n\nEnrique:\n\n\nMichael:"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/jamesEmailAddress"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EmailView" />
+        app:layout_constraintStart_toStartOf="@+id/EmailView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
