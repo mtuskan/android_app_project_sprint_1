@@ -5,12 +5,6 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment">
 
-<!--    <activity-->
-<!--        android:id="@+id/resourcesActivity"-->
-<!--        android:name="edu.tacoma.uw.projectsprint1_group9.resourcesActivity"-->
-<!--        android:label="resources_activity">-->
-<!--    </activity>-->
-
     <fragment
         android:id="@+id/CareerFragment"
         android:name="edu.tacoma.uw.projectsprint1_group9.CareerFragment"
