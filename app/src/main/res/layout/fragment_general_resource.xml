@@ -5,7 +5,7 @@
     android:id="@+id/career_layout_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CareerFragment">
+    tools:context=".GeneralResourceFragment">
 
     <TextView
         android:id="@+id/textViewIntro"

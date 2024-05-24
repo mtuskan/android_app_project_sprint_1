@@ -9,9 +9,6 @@
         android:id="@+id/resourcesActivity"
         android:name="edu.tacoma.uw.projectsprint1_group9.resourcesActivity"
         android:label="resources_activity">
-<!--        <action-->
-<!--            android:id="@+id/action_resourcesActivity_to_careerFragment"-->
-<!--            app:destination="@id/careerFragment" />-->
     </activity>
 
     <fragment
@@ -20,18 +17,10 @@
         android:label="fragment_career"
         tools:layout="@layout/fragment_career" />
     <fragment
-        android:id="@+id/resourceFragment"
-        android:name="edu.tacoma.uw.projectsprint1_group9.GeneralResourceFragment"
-        android:label="ResourceFragment" />
-    <fragment
         android:id="@+id/clubsFragment"
         android:name="edu.tacoma.uw.projectsprint1_group9.clubsFragment"
         android:label="fragment_clubs"
         tools:layout="@layout/fragment_clubs" />
-    <fragment
-        android:id="@+id/studyFragment"
-        android:name="edu.tacoma.uw.projectsprint1_group9.StudyFragment"
-        android:label="StudyFragment" />
     <fragment
         android:id="@+id/loginFragment"
         android:name="edu.tacoma.uw.projectsprint1_group9.LoginFragment"
@@ -50,5 +39,30 @@
         android:id="@+id/splashGreetingsActivity"
         android:name="edu.tacoma.uw.projectsprint1_group9.SplashGreetingsActivity"
         android:label="SplashGreetingsActivity" />
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="edu.tacoma.uw.projectsprint1_group9.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_resource"
+        android:name="edu.tacoma.uw.projectsprint1_group9.ResourceHomeFragment"
+        android:label="fragment_resource_home"
+        tools:layout="@layout/fragment_resource_home" />
+    <fragment
+        android:id="@+id/navigation_about"
+        android:name="edu.tacoma.uw.projectsprint1_group9.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/studyFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.StudyFragment"
+        android:label="fragment_study"
+        tools:layout="@layout/fragment_study" />
+    <fragment
+        android:id="@+id/generalResourceFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.GeneralResourceFragment"
+        android:label="fragment_general_resource"
+        tools:layout="@layout/fragment_general_resource" />
 
 </navigation>
