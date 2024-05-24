@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * ViewModel for managing  feedback.
+ * ViewModel for managing and handling feedback reviews.
  *
  * @author Enrique Vargas
  */
@@ -36,7 +36,7 @@ public class ReviewViewModel extends AndroidViewModel {
     /**
      * Constructor for ReviewViewModel.
      *
-     * @param application The application context.
+     * @param application The Application instance.
      */
     public ReviewViewModel(@NonNull Application application) {
         super(application);
@@ -47,10 +47,10 @@ public class ReviewViewModel extends AndroidViewModel {
     }
 
     /**
-     * Add an observer to the response.
+     * Adds an observer for the response.
      *
-     * @param owner    The LifecycleOwner.
-     * @param observer The observer.
+     * @param owner    The LifecycleOwner which controls the observer.
+     * @param observer The observer that will receive the response updates.
      */
     public void addResponseObserver(@NonNull LifecycleOwner owner,
                                     @NonNull Observer<? super JSONObject> observer) {
@@ -58,9 +58,9 @@ public class ReviewViewModel extends AndroidViewModel {
     }
 
     /**
-     * Handle errors from Volley requests.
+     * Handles errors from the Volley request.
      *
-     * @param error The VolleyError.
+     * @param error The VolleyError encountered.
      */
     private void handleError(final VolleyError error) {
         if (Objects.isNull(error.networkResponse)) {
@@ -86,11 +86,11 @@ public class ReviewViewModel extends AndroidViewModel {
     }
 
     /**
-     * Add a review to the database.
+     * Sends a review to the server.
      *
      * @param name     The name of the reviewer.
      * @param year     The year of the review.
-     * @param feedback The feedback.
+     * @param feedback The feedback text.
      */
     public void addReview(String name, String year, String feedback) {
         String url = "https://students.washington.edu/enriquev/add_review.php";
@@ -106,7 +106,7 @@ public class ReviewViewModel extends AndroidViewModel {
         Request request = new JsonObjectRequest(
                 Request.Method.POST,
                 url,
-                body, //no body for this get request
+                body, // Body for the POST request
                 mResponse::setValue,
                 this::handleError);
 
@@ -115,16 +115,16 @@ public class ReviewViewModel extends AndroidViewModel {
                 10_000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        //Instantiate the RequestQueue and add the request to the queue
+        // Instantiate the RequestQueue and add the request to the queue
         Volley.newRequestQueue(getApplication().getApplicationContext())
                 .add(request);
     }
 
     /**
-     * Add an observer to the feedback list.
+     * Adds an observer for the list of feedback reviews.
      *
-     * @param owner    The LifecycleOwner.
-     * @param observer The observer.
+     * @param owner    The LifecycleOwner which controls the observer.
+     * @param observer The observer that will receive the list updates.
      */
     public void addFeedbackListObserver(@NonNull LifecycleOwner owner,
                                         @NonNull Observer<? super List<Feedback>> observer) {
@@ -132,29 +132,32 @@ public class ReviewViewModel extends AndroidViewModel {
     }
 
     /**
-     * Handle the result of the getReviews request.
+     * Handles the result from the server and updates the feedback list.
      *
-     * @param result The JSON result.
+     * @param result The JSONObject result from the server.
      */
     private void handleResult(final JSONObject result) {
         try {
             String data = result.getString("review");
             JSONArray arr = new JSONArray(data);
+            List<Feedback> currentList = mReviewsList.getValue();
+            if (currentList == null) {
+                currentList = new ArrayList<>();
+            }
             for (int i = 0; i < arr.length(); i++) {
                 JSONObject obj = arr.getJSONObject(i);
                 Feedback review = new Feedback(obj.getString(Feedback.NAME), obj.getString(Feedback.YEAR), obj.getString(Feedback.FEEDBACK));
-                mReviewsList.getValue().add(review);
+                currentList.add(review);
             }
-
+            mReviewsList.setValue(currentList);
         } catch (JSONException e) {
             e.printStackTrace();
             Log.e("ERROR!", e.getMessage());
         }
-        mReviewsList.setValue(mReviewsList.getValue());
     }
 
     /**
-     * Get reviews from the database.
+     * Requests the list of reviews from the server.
      */
     public void getReviews() {
         String url = "https://students.washington.edu/enriquev/get_reviews.php";
@@ -162,7 +165,7 @@ public class ReviewViewModel extends AndroidViewModel {
         Request request = new JsonObjectRequest(
                 Request.Method.GET,
                 url,
-                null, //no body for this get request
+                null, // No body for this GET request
                 this::handleResult,
                 this::handleError);
 
@@ -170,8 +173,7 @@ public class ReviewViewModel extends AndroidViewModel {
                 10_000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-
-        //Instantiate the RequestQueue and add the request to the queue
+        // Instantiate the RequestQueue and add the request to the queue
         Volley.newRequestQueue(getApplication().getApplicationContext())
                 .add(request);
     }
