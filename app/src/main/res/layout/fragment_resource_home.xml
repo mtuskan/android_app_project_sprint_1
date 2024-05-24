@@ -86,10 +86,12 @@
         android:layout_marginTop="18dp"
         android:backgroundTint="#4B2E83"
         android:text="@string/button_clubs"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLeetCode"
+        app:layout_constraintVertical_bias="0.065"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
 

@@ -76,11 +76,11 @@ public class AddFeedbacksFragment extends Fragment {
 
         mBinding.buttonAddFeedback.setOnClickListener(button -> processAddFeedback());
 
-        Button homeButton = view.findViewById(R.id.HomeButton);
-        homeButton.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), MainActivity.class);
-            startActivity(intent);
-        });
+//        Button homeButton = view.findViewById(R.id.HomeButton);
+//        homeButton.setOnClickListener(v -> {
+//            Intent intent = new Intent(requireContext(), MainActivity.class);
+//            startActivity(intent);
+//        });
 
     }
 
@@ -100,6 +100,17 @@ public class AddFeedbacksFragment extends Fragment {
             Toast.makeText(getContext(), "All fields must be filled out", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        if (!name.matches("[a-zA-Z ]+")) {
+            Toast.makeText(getContext(), "Name must contain only letters and spaces", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (!year.matches("[a-zA-Z ]+")) {
+            Toast.makeText(getContext(), "Year must contain only letters and spaces", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
 
         Log.i(TAG, "Data is " + name + ", " + year + ", " + feedback);
 

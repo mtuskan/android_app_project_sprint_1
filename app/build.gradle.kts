@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.navigation.ui)
     implementation(libs.recyclerview)
     testImplementation(libs.junit)
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
     androidTestImplementation(libs.ext.junit)
 //    androidTestImplementation(libs.espresso.core)
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
