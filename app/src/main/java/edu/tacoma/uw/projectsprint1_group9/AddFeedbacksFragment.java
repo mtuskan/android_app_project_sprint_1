@@ -101,6 +101,17 @@ public class AddFeedbacksFragment extends Fragment {
             return;
         }
 
+        if (!name.matches("[a-zA-Z ]+")) {
+            Toast.makeText(getContext(), "Name must contain only letters and spaces", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (!year.matches("[a-zA-Z ]+")) {
+            Toast.makeText(getContext(), "Year must contain only letters and spaces", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+
         Log.i(TAG, "Data is " + name + ", " + year + ", " + feedback);
 
         reviewViewModel.addReview(name, year, feedback);
