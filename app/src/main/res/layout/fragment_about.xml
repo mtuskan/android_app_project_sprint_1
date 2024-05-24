@@ -13,10 +13,11 @@
         android:layout_width="356dp"
         android:layout_height="220dp"
         android:layout_marginStart="29dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="26dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="33dp"
         android:fontFamily="@font/open_sans_light"
-        android:text="DawgsTeCCSupport is an app created by UWT students for UWT students to easily access resources that are essential to success in the CS program! There are links to pages that contain information on resources located on campus such as career, portfolio, and study support. Other links include fun services such as our best places to study and where to get food. If you have any recommendations, feedback, or want to learn more about the developers of this app, our contact info is below and we will be more than happy to talk with you. We thank you for using this app!"
+        android:text="DawgsTeCSSupport is an app created by UWT students for UWT students to easily access resources that are essential to success in the CS program! There are links to pages that contain information on resources located on campus such as career, portfolio, and study support. Other links include fun services such as our best places to study and where to get food. If you have any recommendations, feedback, or want to learn more about the developers of this app, our contact info is below and we will be more than happy to talk with you. We thank you for using this app!"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toTopOf="@+id/EmailView"
@@ -25,75 +26,13 @@
         app:layout_constraintTop_toBottomOf="@+id/studyTipsView" />
 
     <TextView
-        android:id="@+id/EmailView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:fontFamily="@font/encode_sans_condensed_black"
-        android:text="EMAILS"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#4B2E83"
-        app:layout_constraintBottom_toTopOf="@+id/jamesEmailAddress"
-        app:layout_constraintEnd_toStartOf="@+id/jamesEmailAddress"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DescriptionView" />
-
-    <TextView
-        android:id="@+id/jamesEmailAddress"
-        android:layout_width="131dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="188dp"
-        android:layout_marginBottom="4dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:singleLine="false"
-        android:text="@string/jamesEmail"
-        app:layout_constraintBottom_toTopOf="@+id/enriqueEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/namesView"
-        app:layout_constraintTop_toBottomOf="@+id/EmailView" />
-
-    <TextView
-        android:id="@+id/enriqueEmailAddress"
-        android:layout_width="151dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="171dp"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="@string/enriqueEmail"
-        app:layout_constraintBottom_toTopOf="@+id/michaelEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/namesView"
-        app:layout_constraintTop_toBottomOf="@+id/jamesEmailAddress" />
-
-    <TextView
-        android:id="@+id/michaelEmailAddress"
-        android:layout_width="152dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="170dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="@string/michaelEmail"
-        app:layout_constraintBottom_toTopOf="@+id/ResourcesButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/namesView"
-        app:layout_constraintTop_toBottomOf="@+id/enriqueEmailAddress" />
-
-    <TextView
         android:id="@+id/studyTipsView"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginStart="29dp"
         android:layout_marginTop="90dp"
         android:layout_marginEnd="272dp"
+        android:layout_marginBottom="3dp"
         android:fontFamily="@font/encode_sans_condensed_black"
         android:text="ABOUT"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -108,14 +47,69 @@
         android:id="@+id/namesView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="153dp"
         android:fontFamily="@font/open_sans_light"
         android:text="James:\n\n\nEnrique:\n\n\nMichael:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/jamesEmailAddress"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/EmailView"
         app:layout_constraintTop_toBottomOf="@+id/EmailView" />
+
+    <TextView
+        android:id="@+id/jamesEmailAddress"
+        android:layout_width="130dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="191dp"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:singleLine="false"
+        android:text="@string/jamesEmail"
+        app:layout_constraintBottom_toTopOf="@+id/enriqueEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/enriqueEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/EmailView" />
+
+    <TextView
+        android:id="@+id/enriqueEmailAddress"
+        android:layout_width="151dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="171dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="@string/enriqueEmail"
+        app:layout_constraintBottom_toTopOf="@+id/michaelEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/namesView"
+        app:layout_constraintTop_toBottomOf="@+id/jamesEmailAddress" />
+
+    <TextView
+        android:id="@+id/EmailView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:fontFamily="@font/encode_sans_condensed_black"
+        android:text="EMAILS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#4B2E83"
+        app:layout_constraintStart_toStartOf="@+id/DescriptionView"
+        app:layout_constraintTop_toBottomOf="@+id/DescriptionView" />
+
+    <TextView
+        android:id="@+id/michaelEmailAddress"
+        android:layout_width="152dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="169dp"
+        android:layout_marginBottom="152dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="@string/michaelEmail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/enriqueEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/enriqueEmailAddress" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

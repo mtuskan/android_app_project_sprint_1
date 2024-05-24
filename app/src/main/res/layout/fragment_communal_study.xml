@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B7A57A"
+    tools:context=".CommunalStudyFragment">
+
+    <TextView
+        android:id="@+id/communityStudyTextView"
+        android:layout_width="293dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/encode_sans_condensed_black"
+        android:text="COMMUNITY STUDY SPOTS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#4B2E83"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/TLCImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tlc"
+        app:layout_constraintBottom_toTopOf="@+id/TiogaViewLabelView"
+        app:layout_constraintEnd_toStartOf="@+id/CEIImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/communityStudyTextView" />
+
+    <ImageView
+        android:id="@+id/MATImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mattressfactory"
+        app:layout_constraintEnd_toStartOf="@+id/WCGImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TiogaViewLabelView" />
+
+    <TextView
+        android:id="@+id/TiogaViewLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="The TLC"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/TLCImageView"
+        app:layout_constraintStart_toStartOf="@+id/TLCImageView"
+        app:layout_constraintTop_toBottomOf="@+id/TLCImageView" />
+
+    <TextView
+        android:id="@+id/DouganLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="The CEI"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/CEIImageView"
+        app:layout_constraintStart_toStartOf="@+id/CEIImageView"
+        app:layout_constraintTop_toBottomOf="@+id/CEIImageView" />
+
+    <ImageView
+        android:id="@+id/WCGImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="28dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wcg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/MATImageView"
+        app:layout_constraintTop_toBottomOf="@+id/DouganLabelView" />
+
+    <TextView
+        android:id="@+id/TPSCornerLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="West Coast Grocery"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/WCGImageView"
+        app:layout_constraintStart_toStartOf="@+id/WCGImageView"
+        app:layout_constraintTop_toBottomOf="@+id/WCGImageView" />
+
+    <TextView
+        android:id="@+id/TPSUpperAreaLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="TPS Upper Area"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/TPSUpperImageView"
+        app:layout_constraintStart_toStartOf="@+id/TPSUpperImageView"
+        app:layout_constraintTop_toBottomOf="@+id/TPSUpperImageView" />
+
+    <TextView
+        android:id="@+id/TPSLowerCommonsLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="TPS Lower Commons"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/TPSLowerImageView"
+        app:layout_constraintStart_toStartOf="@+id/TPSLowerImageView"
+        app:layout_constraintTop_toBottomOf="@+id/TPSLowerImageView" />
+
+    <TextView
+        android:id="@+id/CPMDSLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="Mattress Factory Commons"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/MATImageView"
+        app:layout_constraintStart_toStartOf="@+id/MATImageView"
+        app:layout_constraintTop_toBottomOf="@+id/MATImageView" />
+
+    <ImageView
+        android:id="@+id/CEIImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="28dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cei"
+        app:layout_constraintBottom_toTopOf="@+id/DouganLabelView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TLCImageView"
+        app:layout_constraintTop_toBottomOf="@+id/communityStudyTextView" />
+
+    <ImageView
+        android:id="@+id/TPSUpperImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="23dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tpsupper"
+        app:layout_constraintEnd_toStartOf="@+id/TPSLowerImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CPMDSLabelView" />
+
+    <ImageView
+        android:id="@+id/TPSLowerImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="28dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tps2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TPSUpperImageView"
+        app:layout_constraintTop_toBottomOf="@+id/TPSCornerLabelView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

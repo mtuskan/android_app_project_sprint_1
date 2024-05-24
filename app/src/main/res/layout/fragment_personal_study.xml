@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B7A57A"
+    tools:context=".CommunalStudyFragment">
+
+    <TextView
+        android:id="@+id/personalStudyTextView"
+        android:layout_width="297dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="74dp"
+        android:fontFamily="@font/encode_sans_condensed_black"
+        android:text="OUR PERSONAL FAVORITES"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#4B2E83"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/BHSImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bhs3rdfloor"
+        app:layout_constraintBottom_toTopOf="@+id/TiogaViewLabelView"
+        app:layout_constraintEnd_toStartOf="@+id/DouganImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personalStudyTextView" />
+
+    <ImageView
+        android:id="@+id/CPMDSImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cp2"
+        app:layout_constraintEnd_toStartOf="@+id/TPSCornerImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TiogaViewLabelView" />
+
+    <TextView
+        android:id="@+id/TiogaViewLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="BHS Third Floor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/BHSImageView"
+        app:layout_constraintStart_toStartOf="@+id/BHSImageView"
+        app:layout_constraintTop_toBottomOf="@+id/BHSImageView" />
+
+    <TextView
+        android:id="@+id/DouganLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="Milgard 2nd Floor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/DouganImageView"
+        app:layout_constraintStart_toStartOf="@+id/DouganImageView"
+        app:layout_constraintTop_toBottomOf="@+id/DouganImageView" />
+
+    <ImageView
+        android:id="@+id/TPSCornerImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="28dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tps1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/CPMDSImageView"
+        app:layout_constraintTop_toBottomOf="@+id/DouganLabelView" />
+
+    <TextView
+        android:id="@+id/TPSCornerLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="TPS Corner"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/TPSCornerImageView"
+        app:layout_constraintStart_toStartOf="@+id/TPSCornerImageView"
+        app:layout_constraintTop_toBottomOf="@+id/TPSCornerImageView" />
+
+    <TextView
+        android:id="@+id/CPMDSLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="CP / MDS Crossing"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/CPMDSImageView"
+        app:layout_constraintStart_toStartOf="@+id/CPMDSImageView"
+        app:layout_constraintTop_toBottomOf="@+id/CPMDSImageView" />
+
+    <ImageView
+        android:id="@+id/DouganImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="28dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/milgard"
+        app:layout_constraintBottom_toTopOf="@+id/DouganLabelView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BHSImageView"
+        app:layout_constraintTop_toBottomOf="@+id/personalStudyTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

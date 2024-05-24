@@ -7,94 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/uwStairsImageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/uwt_stairway_background"
-        tools:layout_editor_absoluteX="-119dp"
-        tools:layout_editor_absoluteY="-35dp" />
-
-    <Button
-        android:id="@+id/ResourcesButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:backgroundTint="#4B2E83"
-        android:fontFamily="sans-serif"
-        android:text="@string/resources"
-        android:textColorLink="#4B2E83"
-        app:layout_constraintEnd_toEndOf="@+id/DawgsTeCCSuportTextView"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="@+id/DawgsTeCCSuportTextView"
-        app:layout_constraintTop_toBottomOf="@+id/DawgsTeCCSuportTextView"
-        app:strokeColor="#FFFFFF"
-        app:strokeWidth="2dp" />
-
-    <Button
-        android:id="@+id/AboutButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="#4B2E83"
-        android:fontFamily="sans-serif"
-        android:text="@string/about"
-        app:layout_constraintEnd_toEndOf="@+id/ResourcesButton"
-        app:layout_constraintHorizontal_bias="0.407"
-        app:layout_constraintStart_toStartOf="@+id/ResourcesButton"
-        app:layout_constraintTop_toBottomOf="@+id/ResourcesButton"
-        app:strokeColor="#FFFFFF"
-        app:strokeWidth="2dp" />
-
-    <ImageView
-        android:id="@+id/uwLogoImageView"
-        android:layout_width="120dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="144dp"
-        android:contentDescription="@string/university_of_washington_tacoma_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/uwStairsImageView"
-        app:srcCompat="@mipmap/uwlogo_round" />
-
-    <TextView
-        android:id="@+id/DawgsTeCCSuportTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/dawgsteccsupport"
-        android:textColor="#FFFFFF"
-        android:textSize="27sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/uwLogoImageView"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/uwLogoImageView"
-        app:layout_constraintTop_toBottomOf="@+id/uwLogoImageView" />
-
-<!--    <androidx.appcompat.widget.Toolbar-->
-<!--        android:id="@+id/my_toolbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="?attr/actionBarSize"-->
-<!--        android:background="?attr/colorPrimary"-->
-<!--        android:elevation="4dp"-->
-<!--        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
-<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
-<!--        tools:ignore="MissingConstraints"/>-->
-
-<!--    <androidx.fragment.app.FragmentContainerView-->
-<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
-<!--        android:id="@+id/nav_host_fragment"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:defaultNavHost="true"-->
-<!--        app:navGraph="@navigation/nav_graph" />-->
+    <androidx.fragment.app.FragmentContainerView
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:id="@+id/nav_host_fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -105,7 +28,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AboutButton"
+        app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment"
         app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

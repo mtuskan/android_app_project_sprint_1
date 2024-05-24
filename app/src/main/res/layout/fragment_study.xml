@@ -1,14 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B7A57A"
     tools:context=".StudyFragment">
 
     <TextView
+        android:id="@+id/studyTipsView"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="193dp"
+        android:fontFamily="@font/encode_sans_condensed_black"
+        android:text="STUDY TIPS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#4B2E83"
+        app:layout_constraintBottom_toTopOf="@+id/DescriptionView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DescriptionView"
+        android:layout_width="357dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:fontFamily="@font/open_sans_light"
+        android:text="\u2022 Start early
+        \n\u2022 Study in groups
+        \n\u2022 Find an environment and time that will work efficiently with your schedule
+        \n\u2022 Rest and take breaks when needed
+        \n\u2022 Don't be afraid to ask for help
+        \n\u2022 Use school provided resources"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/studySpotsView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studyTipsView" />
+
+    <TextView
+        android:id="@+id/studySpotsView"
+        android:layout_width="303dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="68dp"
+        android:fontFamily="@font/encode_sans_condensed_black"
+        android:text="OUR FAVORITE STUDY SPOTS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#4B2E83"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DescriptionView" />
+
+    <Button
+        android:id="@+id/communalStudyButton"
+        style="@style/Widget.Material3.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
-</androidx.core.widget.NestedScrollView>
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="107dp"
+        android:backgroundTint="#4B2E83"
+        android:text="Communal Studying"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studySpotsView" />
+
+    <Button
+        android:id="@+id/quietStudyButton"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:backgroundTint="#4B2E83"
+        android:text="Quiet Studying"
+        app:layout_constraintEnd_toEndOf="@+id/communalStudyButton"
+        app:layout_constraintStart_toStartOf="@+id/communalStudyButton"
+        app:layout_constraintTop_toBottomOf="@+id/communalStudyButton" />
+
+    <Button
+        android:id="@+id/studyViewButton"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:backgroundTint="#4B2E83"
+        android:text="Study With A View"
+        app:layout_constraintEnd_toEndOf="@+id/personalFavoritesButton"
+        app:layout_constraintStart_toStartOf="@+id/personalFavoritesButton"
+        app:layout_constraintTop_toBottomOf="@+id/personalFavoritesButton" />
+
+    <Button
+        android:id="@+id/personalFavoritesButton"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:backgroundTint="#4B2E83"
+        android:text="Personal Favorites"
+        app:layout_constraintEnd_toEndOf="@+id/quietStudyButton"
+        app:layout_constraintStart_toStartOf="@+id/quietStudyButton"
+        app:layout_constraintTop_toBottomOf="@+id/quietStudyButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
