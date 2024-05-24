@@ -19,9 +19,6 @@
             android:exported="false"
             android:theme="@style/Theme.ProjectSprint1Group9_NAB"/>
         <activity
-            android:name=".AboutActivity"
-            android:exported="false" />
-        <activity
             android:name=".resourcesActivity"
             android:exported="false" />
         <activity android:name=".MainActivity"/>

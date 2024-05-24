@@ -21,7 +21,7 @@ import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentClubsBinding;
  * A simple {@link Fragment} subclass.
  *
  */
-public class clubsFragment extends Fragment {
+public class ClubsFragment extends Fragment {
 
 
     private FragmentClubsBinding mBinding;

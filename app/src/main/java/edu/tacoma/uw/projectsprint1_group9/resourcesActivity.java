@@ -83,7 +83,7 @@ public class resourcesActivity extends AppCompatActivity {
 
 
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.main, new clubsFragment())
+                        .replace(R.id.main, new ClubsFragment())
                         .addToBackStack(null)
                         .commit();
             }

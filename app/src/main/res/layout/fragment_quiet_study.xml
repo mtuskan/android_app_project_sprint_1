@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B7A57A"
+    tools:context=".QuietStudyFragment">
+
+    <TextView
+        android:id="@+id/quietStudyTextView"
+        android:layout_width="298dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="73dp"
+        android:fontFamily="@font/encode_sans_condensed_black"
+        android:text="quiet STUDY SPOTS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#4B2E83"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/TiogaImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tioga2"
+        app:layout_constraintBottom_toTopOf="@+id/TiogaLabelView"
+        app:layout_constraintEnd_toStartOf="@+id/CPImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quietStudyTextView" />
+
+    <ImageView
+        android:id="@+id/PowerhouseImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/powerhouse2"
+        app:layout_constraintEnd_toEndOf="@+id/CPImageView"
+        app:layout_constraintStart_toStartOf="@+id/TiogaImageView"
+        app:layout_constraintTop_toBottomOf="@+id/TiogaLabelView" />
+
+    <TextView
+        android:id="@+id/TiogaLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="Tioga 4th Floor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/TiogaImageView"
+        app:layout_constraintStart_toStartOf="@+id/TiogaImageView"
+        app:layout_constraintTop_toBottomOf="@+id/TiogaImageView" />
+
+    <TextView
+        android:id="@+id/CPLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="Cherry Parkes 3rd Floor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/CPImageView"
+        app:layout_constraintStart_toStartOf="@+id/CPImageView"
+        app:layout_constraintTop_toBottomOf="@+id/CPImageView" />
+
+    <TextView
+        android:id="@+id/PwrHouseLabelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="The Powerhouse"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/PowerhouseImageView"
+        app:layout_constraintStart_toStartOf="@+id/PowerhouseImageView"
+        app:layout_constraintTop_toBottomOf="@+id/PowerhouseImageView" />
+
+    <ImageView
+        android:id="@+id/CPImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="28dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cp"
+        app:layout_constraintBottom_toTopOf="@+id/CPLabelView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TiogaImageView"
+        app:layout_constraintTop_toBottomOf="@+id/quietStudyTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
