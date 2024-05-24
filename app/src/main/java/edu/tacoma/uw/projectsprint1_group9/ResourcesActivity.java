@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class resourcesActivity extends AppCompatActivity {
+public class ResourcesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +26,9 @@ public class resourcesActivity extends AppCompatActivity {
 
         findViewById(R.id.buttonHome).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                finish();
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -36,12 +37,7 @@ public class resourcesActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     // Hide the views
-                    findViewById(R.id.textViewResource).setVisibility(View.GONE);
-                    findViewById(R.id.buttonStudentResources).setVisibility(View.GONE);
-                    findViewById(R.id.buttonStudentClubs).setVisibility(View.GONE);
-                    findViewById(R.id.buttonStudyTips).setVisibility(View.GONE);
-                    findViewById(R.id.buttonLeetCode).setVisibility(View.GONE);
-                    findViewById(R.id.buttonCareer).setVisibility(View.GONE);
+                    hideViews();
 
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.main, new CareerFragment())
@@ -55,12 +51,7 @@ public class resourcesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Hide the views
-                    findViewById(R.id.textViewResource).setVisibility(View.GONE);
-                    findViewById(R.id.buttonStudentResources).setVisibility(View.GONE);
-                    findViewById(R.id.buttonStudentClubs).setVisibility(View.GONE);
-                    findViewById(R.id.buttonStudyTips).setVisibility(View.GONE);
-                    findViewById(R.id.buttonLeetCode).setVisibility(View.GONE);
-                    findViewById(R.id.buttonCareer).setVisibility(View.GONE);
+                hideViews();
 
 
                 getSupportFragmentManager().beginTransaction()
@@ -74,16 +65,11 @@ public class resourcesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Hide the views
-                findViewById(R.id.textViewResource).setVisibility(View.GONE);
-                findViewById(R.id.buttonStudentResources).setVisibility(View.GONE);
-                findViewById(R.id.buttonStudentClubs).setVisibility(View.GONE);
-                findViewById(R.id.buttonStudyTips).setVisibility(View.GONE);
-                findViewById(R.id.buttonLeetCode).setVisibility(View.GONE);
-                findViewById(R.id.buttonCareer).setVisibility(View.GONE);
+                hideViews();
 
 
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.main, new clubsFragment())
+                        .replace(R.id.main, new ClubsFragment())
                         .addToBackStack(null)
                         .commit();
             }
@@ -105,13 +91,7 @@ public class resourcesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Hide the views
-                findViewById(R.id.textViewResource).setVisibility(View.GONE);
-                findViewById(R.id.buttonStudentResources).setVisibility(View.GONE);
-                findViewById(R.id.buttonStudentClubs).setVisibility(View.GONE);
-                findViewById(R.id.buttonStudyTips).setVisibility(View.GONE);
-                findViewById(R.id.buttonLeetCode).setVisibility(View.GONE);
-                findViewById(R.id.buttonCareer).setVisibility(View.GONE);
-
+                hideViews();
 
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.main, new StudyFragment())
@@ -121,4 +101,15 @@ public class resourcesActivity extends AppCompatActivity {
         });
 
     }
+
+    //Helper method to hide views
+    private void hideViews() {
+        findViewById(R.id.textViewResource).setVisibility(View.GONE);
+        findViewById(R.id.buttonStudentResources).setVisibility(View.GONE);
+        findViewById(R.id.buttonStudentClubs).setVisibility(View.GONE);
+        findViewById(R.id.buttonStudyTips).setVisibility(View.GONE);
+        findViewById(R.id.buttonLeetCode).setVisibility(View.GONE);
+        findViewById(R.id.buttonCareer).setVisibility(View.GONE);
+    }
+
 }

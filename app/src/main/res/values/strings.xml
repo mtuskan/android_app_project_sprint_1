@@ -11,6 +11,7 @@
     <string name="button_clubs"> Student Clubs</string>
     <string name="button_leetcode"> LeetCode</string>
     <string name="button_career"> Career Tips</string>
+    <string name="home"> Home</string>
 
     <string name="textview_title"> Student CS resources</string>
     <!-- strings for the career fragment -->
@@ -71,6 +72,16 @@
     <string name="logo">Logo</string>
     <string name="homeRes">Home</string>
 
+
+    <string name="enter_name_feedback">Enter Name:</string>
+    <string name="enter_year_feedback">Enter Year: (ex: Senior)</string>
+    <string name="feedback_goes_here">Feedback goes here!</string>
+    <string name="feedback_title">Leave a Review of App</string>
+    <string name="app_logo_feedback">App logo</string>
+    <string name="feedback">Feedback</string>
+    <string name="submitFeedback">Submit!</string>
+    <string name="view_feedback">View Feedback!</string>
+
     <!-- Email addresses hyperlinks -->
     <string name="jamesEmail"><a href="mailto:jjl336@uw.edu">jjl336@uw.edu</a></string>
     <string name="enriqueEmail"><a href="mailto:enriquev@uw.edu">enriquev@uw.edu</a></string>
@@ -89,4 +100,5 @@
 
     <string name="action_logout">logout</string>
     <string name="dawgsteccsupport">DawgsTeCCSupport</string>
+    <string name="welcometext">Welcome Student!</string>
 </resources>

@@ -1,28 +1,40 @@
 package edu.tacoma.uw.projectsprint1_group9;
+
 import android.app.Application;
 import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
+
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-public class UserViewModel extends AndroidViewModel {
+public class ReviewViewModel extends AndroidViewModel {
     private MutableLiveData<JSONObject> mResponse;
 
-    public UserViewModel(@NonNull Application application) {
+    private MutableLiveData<List<Feedback>> mReviewsList;
+
+    public ReviewViewModel(@NonNull Application application) {
         super(application);
         mResponse = new MutableLiveData<>();
         mResponse.setValue(new JSONObject());
+        mReviewsList = new MutableLiveData<>();
+        mReviewsList.setValue(new ArrayList<>());
 
     }
 
@@ -53,13 +65,13 @@ public class UserViewModel extends AndroidViewModel {
             }
         }
     }
-
-    public void addUser(Account account) {
-        String url = "https://students.washington.edu/mtuskan/register_user.php";
+    public void addReview(String name, String year, String feedback) {
+        String url = "https://students.washington.edu/enriquev/add_review.php";
         JSONObject body = new JSONObject();
         try {
-            body.put("email", account.getEmail());
-            body.put("password", account.getPassword());
+            body.put("name", name);
+            body.put("year", year);
+            body.put("feedback", feedback);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -71,7 +83,7 @@ public class UserViewModel extends AndroidViewModel {
                 mResponse::setValue,
                 this::handleError);
 
-        Log.i("edu.tacoma.uw.projectsprint1_group9.UserViewModel", request.getUrl().toString());
+        Log.i("ReviewViewModel", request.getUrl().toString());
         request.setRetryPolicy(new DefaultRetryPolicy(
                 10_000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
@@ -81,30 +93,63 @@ public class UserViewModel extends AndroidViewModel {
                 .add(request);
     }
 
-    public void authenticateUser(Account account) {
-        String url = "https://students.washington.edu/mtuskan/login.php";
-        JSONObject body = new JSONObject();
+    public void addFeedbackListObserver(@NonNull LifecycleOwner owner,
+                                        @NonNull Observer<? super List<Feedback>> observer) {
+        mReviewsList.observe(owner, observer);
+    }
+
+    private void handleResult(final JSONObject result) {
         try {
-            body.put("email", account.getEmail());
-            body.put("password", account.getPassword());
+            String data = result.getString("review");
+            JSONArray arr = new JSONArray(data);
+            for (int i = 0; i < arr.length(); i++) {
+                JSONObject obj = arr.getJSONObject(i);
+                Feedback review = new Feedback(obj.getString(Feedback.NAME), obj.getString(Feedback.YEAR), obj.getString(Feedback.FEEDBACK));
+                mReviewsList.getValue().add(review);
+            }
+
         } catch (JSONException e) {
             e.printStackTrace();
+            Log.e("ERROR!", e.getMessage());
         }
+        mReviewsList.setValue(mReviewsList.getValue());
+    }
+
+    public void getReviews() {
+
+        String url =
+
+                "https://students.washington.edu/enriquev/get_reviews.php";
 
         Request request = new JsonObjectRequest(
-                Request.Method.POST,
+
+                Request.Method.GET,
+
                 url,
-                body, //no body for this get request
-                mResponse::setValue,
+
+                null, //no body for this get request
+
+                this::handleResult,
+
                 this::handleError);
 
-        Log.i("UserViewModel", request.getUrl().toString());
+
+
         request.setRetryPolicy(new DefaultRetryPolicy(
+
                 10_000,
+
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
         //Instantiate the RequestQueue and add the request to the queue
+
         Volley.newRequestQueue(getApplication().getApplicationContext())
+
                 .add(request);
+
     }
+
+
 }

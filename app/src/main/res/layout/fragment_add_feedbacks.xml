@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddFeedbacksFragment">
+
+    <Button
+        android:id="@+id/buttonAddFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="193dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="300dp"
+        android:backgroundTint="#4B2E83"
+        android:text="@string/submitFeedback"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="sans-serif"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp"/>
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="147dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="@string/enter_name_feedback"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextSchoolYear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/editTextSchoolYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="@string/enter_year_feedback"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextFeedback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editTextFeedback"
+        android:layout_width="215dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="top"
+        android:hint="@string/feedback_goes_here"
+        android:inputType="textMultiLine"
+        android:minLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddFeedback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/feedback_title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="130dp"
+        android:fontFamily="@font/encode_sans_condensed_black"
+        android:text="@string/feedback_title"
+        android:textColor=" #4B2E83"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="227dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="120dp"
+        android:contentDescription="@string/app_logo_feedback"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/HomeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#4B2E83"
+        android:fontFamily="sans-serif"
+        android:text="@string/home_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

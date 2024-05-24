@@ -5,27 +5,20 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment">
 
-    <activity
-        android:id="@+id/resourcesActivity"
-        android:name="edu.tacoma.uw.projectsprint1_group9.resourcesActivity"
-        android:label="resources_activity">
-<!--        <action-->
-<!--            android:id="@+id/action_resourcesActivity_to_careerFragment"-->
-<!--            app:destination="@id/careerFragment" />-->
-    </activity>
+<!--    <activity-->
+<!--        android:id="@+id/resourcesActivity"-->
+<!--        android:name="edu.tacoma.uw.projectsprint1_group9.resourcesActivity"-->
+<!--        android:label="resources_activity">-->
+<!--    </activity>-->
 
     <fragment
-        android:id="@+id/careerFragment"
+        android:id="@+id/CareerFragment"
         android:name="edu.tacoma.uw.projectsprint1_group9.CareerFragment"
         android:label="fragment_career"
         tools:layout="@layout/fragment_career" />
     <fragment
-        android:id="@+id/resourceFragment"
-        android:name="edu.tacoma.uw.projectsprint1_group9.GeneralResourceFragment"
-        android:label="ResourceFragment" />
-    <fragment
-        android:id="@+id/clubsFragment"
-        android:name="edu.tacoma.uw.projectsprint1_group9.clubsFragment"
+        android:id="@+id/ClubsFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.ClubsFragment"
         android:label="fragment_clubs"
         tools:layout="@layout/fragment_clubs" />
     <fragment
@@ -46,5 +39,93 @@
         android:id="@+id/splashGreetingsActivity"
         android:name="edu.tacoma.uw.projectsprint1_group9.SplashGreetingsActivity"
         android:label="SplashGreetingsActivity" />
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="edu.tacoma.uw.projectsprint1_group9.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_resource"
+        android:name="edu.tacoma.uw.projectsprint1_group9.ResourceHomeFragment"
+        android:label="fragment_resource_home"
+        tools:layout="@layout/fragment_resource_home" >
+        <action
+            android:id="@+id/action_navigation_resource_to_careerFragment"
+            app:destination="@id/CareerFragment" />
+        <action
+            android:id="@+id/action_navigation_resource_to_generalResourceFragment"
+            app:destination="@id/GeneralResourceFragment" />
+        <action
+            android:id="@+id/action_navigation_resource_to_studyFragment"
+            app:destination="@id/StudyFragment" />
+        <action
+            android:id="@+id/action_navigation_resource_to_clubsFragment"
+            app:destination="@id/ClubsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_about"
+        android:name="edu.tacoma.uw.projectsprint1_group9.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_navigation_about_to_addFeedbacksFragment"
+            app:destination="@id/addFeedbacksFragment" />
+        <action
+            android:id="@+id/action_navigation_about_to_feedbackListFragment"
+            app:destination="@id/feedbackListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/StudyFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.StudyFragment"
+        android:label="fragment_study"
+        tools:layout="@layout/fragment_study" >
+        <action
+            android:id="@+id/action_StudyFragment_to_communalStudyFragment"
+            app:destination="@id/communalStudyFragment" />
+        <action
+            android:id="@+id/action_StudyFragment_to_personalStudyFragment"
+            app:destination="@id/personalStudyFragment" />
+        <action
+            android:id="@+id/action_StudyFragment_to_quietStudyFragment"
+            app:destination="@id/quietStudyFragment" />
+        <action
+            android:id="@+id/action_StudyFragment_to_viewStudyFragment"
+            app:destination="@id/viewStudyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/GeneralResourceFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.GeneralResourceFragment"
+        android:label="fragment_general_resource"
+        tools:layout="@layout/fragment_general_resource" />
+    <fragment
+        android:id="@+id/communalStudyFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.CommunalStudyFragment"
+        android:label="fragment_communal_study"
+        tools:layout="@layout/fragment_communal_study" />
+    <fragment
+        android:id="@+id/personalStudyFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.PersonalStudyFragment"
+        android:label="fragment_personal_study"
+        tools:layout="@layout/fragment_personal_study" />
+    <fragment
+        android:id="@+id/quietStudyFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.QuietStudyFragment"
+        android:label="fragment_quiet_study"
+        tools:layout="@layout/fragment_quiet_study" />
+    <fragment
+        android:id="@+id/viewStudyFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.ViewStudyFragment"
+        android:label="fragment_view_study"
+        tools:layout="@layout/fragment_view_study" />
+    <fragment
+        android:id="@+id/addFeedbacksFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.AddFeedbacksFragment"
+        android:label="fragment_add_feedbacks"
+        tools:layout="@layout/fragment_add_feedbacks" />
+    <fragment
+        android:id="@+id/feedbackListFragment"
+        android:name="edu.tacoma.uw.projectsprint1_group9.FeedbackListFragment"
+        android:label="fragment_feedback_list"
+        tools:layout="@layout/fragment_feedback_list" />
 
 </navigation>
