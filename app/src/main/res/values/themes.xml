@@ -4,6 +4,9 @@
         <!-- Customize your light theme here. -->
 <!--         <item name="colorPrimary">#B7A57A</item>-->
 <!--        <item name="colorPrimaryDark">#B7A57A</item>-->
+        <item name="colorPrimary">#B7A57A</item>
+        <item name="colorContainer">#B7A57A</item>
+        <item name="colorPrimaryContainer">#B7A57A</item>
     </style>
 
     <style name="Base.Theme.ProjectSprint1Group9_NAB" parent="Theme.Material3.DayNight.NoActionBar">
