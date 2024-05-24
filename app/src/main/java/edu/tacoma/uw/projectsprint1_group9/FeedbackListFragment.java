@@ -1,5 +1,6 @@
 package edu.tacoma.uw.projectsprint1_group9;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentFeedbackListBinding;
 
@@ -49,6 +51,12 @@ public class FeedbackListFragment extends Fragment {
                 );
             }
 
+        });
+
+        Button homeButton = view.findViewById(R.id.HomeButton);
+        homeButton.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), MainActivity.class);
+            startActivity(intent);
         });
     }
 }

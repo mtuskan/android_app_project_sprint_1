@@ -55,7 +55,7 @@ public class UserViewModel extends AndroidViewModel {
     }
 
     public void addUser(Account account) {
-        String url = "http://students.washington.edu/mtuskan/register_user.php";
+        String url = "https://students.washington.edu/mtuskan/register_user.php";
         JSONObject body = new JSONObject();
         try {
             body.put("email", account.getEmail());
@@ -82,7 +82,7 @@ public class UserViewModel extends AndroidViewModel {
     }
 
     public void authenticateUser(Account account) {
-        String url = "http://students.washington.edu/mtuskan/login.php";
+        String url = "https://students.washington.edu/mtuskan/login.php";
         JSONObject body = new JSONObject();
         try {
             body.put("email", account.getEmail());

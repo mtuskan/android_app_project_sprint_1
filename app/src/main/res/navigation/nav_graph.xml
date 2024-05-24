@@ -15,11 +15,6 @@
     </activity>
 
     <fragment
-        android:id="@+id/careerFragment"
-        android:name="edu.tacoma.uw.projectsprint1_group9.CareerFragment"
-        android:label="fragment_career"
-        tools:layout="@layout/fragment_career" />
-    <fragment
         android:id="@+id/clubsFragment"
         android:name="edu.tacoma.uw.projectsprint1_group9.clubsFragment"
         android:label="fragment_clubs"

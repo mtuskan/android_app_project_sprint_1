@@ -52,6 +52,18 @@ public class AboutActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.viewFeedbackButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                hideViews();
+
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.main, new FeedbackListFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
 
         findViewById(R.id.jamesEmailAddress).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,7 +102,7 @@ public class AboutActivity extends AppCompatActivity {
         findViewById(R.id.EmailView).setVisibility(View.GONE);
         findViewById(R.id.studyTipsView).setVisibility(View.GONE);
         findViewById(R.id.namesView).setVisibility(View.GONE);
-        findViewById(R.id.FeedbackButton).setVisibility(View.GONE);
+        findViewById(R.id.viewFeedbackButton).setVisibility(View.GONE);
 
 
     }
