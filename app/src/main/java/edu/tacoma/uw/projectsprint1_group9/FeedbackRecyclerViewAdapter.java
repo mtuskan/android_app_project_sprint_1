@@ -54,17 +54,8 @@ public class FeedbackRecyclerViewAdapter extends RecyclerView.Adapter<FeedbackRe
             mItem = item;
             binding.feedbackName.setText(item.getName());
             binding.feedbackYear.setText(item.getYear());
-            binding.feedbackYear.setOnClickListener(view ->
-            {
-                FeedbackListFragmentDirections.ActionFeedbackListFragmentToFeedbackDetailFragment directions =
-                        FeedbackListFragmentDirections.actionFeedbackListFragmentToFeedbackDetailFragment(item);
-
-                Navigation.findNavController(mView)
-                        .navigate(directions);
-            });
+            binding.feedbackReply.setText(item.getFeedback());
 
         }
     }
-
-
 }
