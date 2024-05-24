@@ -60,16 +60,16 @@ public class CareerFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Button backButton = view.findViewById(R.id.back_to_resource);
-        backButton.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), ResourcesActivity.class);
-            startActivity(intent);
-        });
+//        Button backButton = view.findViewById(R.id.back_to_resource);
+//        backButton.setOnClickListener(v -> {
+//            Intent intent = new Intent(requireContext(), ResourcesActivity.class);
+//            startActivity(intent);
+//        });
 
-        Button homeButton = view.findViewById(R.id.home_button);
-        homeButton.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), MainActivity.class);
-            startActivity(intent);
-        });
+//        Button homeButton = view.findViewById(R.id.home_button);
+//        homeButton.setOnClickListener(v -> {
+//            Intent intent = new Intent(requireContext(), MainActivity.class);
+//            startActivity(intent);
+//        });
     }
 }

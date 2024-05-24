@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="#B7A57A"
     tools:context=".FeedbackListFragment">
 
     <TextView
@@ -31,27 +32,10 @@
         android:layout_height="547dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="8dp"
         app:layoutManager="LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@+id/HomeButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="101dp"
         tools:listitem="@layout/fragment_feedback" />
-
-    <Button
-        android:id="@+id/HomeButton"
-        android:layout_width="99dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginBottom="11dp"
-        android:backgroundTint="#4B2E83"
-        android:fontFamily="sans-serif"
-        android:text="@string/home_button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="#FFFFFF"
-        app:strokeWidth="2dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
