@@ -21,7 +21,7 @@ import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentClubsBinding;
  * A simple {@link Fragment} subclass.
  *
  */
-public class clubsFragment extends Fragment {
+public class ClubsFragment extends Fragment {
 
 
     private FragmentClubsBinding mBinding;
@@ -46,7 +46,7 @@ public class clubsFragment extends Fragment {
 
         Button backButton = view.findViewById(R.id.back_to_resource);
         backButton.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), resourcesActivity.class);
+            Intent intent = new Intent(requireContext(), ResourcesActivity.class);
             startActivity(intent);
         });
 

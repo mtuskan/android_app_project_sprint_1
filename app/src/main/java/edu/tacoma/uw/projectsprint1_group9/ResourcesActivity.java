@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class resourcesActivity extends AppCompatActivity {
+public class ResourcesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +69,7 @@ public class resourcesActivity extends AppCompatActivity {
 
 
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.main, new clubsFragment())
+                        .replace(R.id.main, new ClubsFragment())
                         .addToBackStack(null)
                         .commit();
             }

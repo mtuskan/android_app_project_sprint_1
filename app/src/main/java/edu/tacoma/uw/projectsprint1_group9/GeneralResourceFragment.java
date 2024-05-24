@@ -44,7 +44,7 @@ public class GeneralResourceFragment extends Fragment {
 
         Button backButton = view.findViewById(R.id.back_to_resource);
         backButton.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), resourcesActivity.class);
+            Intent intent = new Intent(requireContext(), ResourcesActivity.class);
             startActivity(intent);
 
         });

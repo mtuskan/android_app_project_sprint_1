@@ -15,42 +15,36 @@ import android.widget.Button;
 
 import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentFeedbackListBinding;
 
-/**
-
- * create an instance of this fragment.
- */
 public class FeedbackListFragment extends Fragment {
 
-
     private ReviewViewModel mModel;
+    private FragmentFeedbackListBinding mBinding;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mModel = new ViewModelProvider(getActivity()).get(ReviewViewModel.class);
+        mModel = new ViewModelProvider(requireActivity()).get(ReviewViewModel.class);
         mModel.getReviews();
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_feedback_list, container, false);
+        mBinding = FragmentFeedbackListBinding.inflate(inflater, container, false);
+        return mBinding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
-        @NonNull FragmentFeedbackListBinding binding = FragmentFeedbackListBinding.bind(getView());
-
+        // Observe the feedback list and update the RecyclerView adapter
         mModel.addFeedbackListObserver(getViewLifecycleOwner(), feedbackList -> {
             if (!feedbackList.isEmpty()) {
-                binding.layoutRoot.setAdapter(
+                mBinding.layoutRoot.setAdapter(
                         new FeedbackRecyclerViewAdapter(feedbackList)
                 );
             }
-
         });
 
         Button homeButton = view.findViewById(R.id.HomeButton);
@@ -58,5 +52,11 @@ public class FeedbackListFragment extends Fragment {
             Intent intent = new Intent(requireContext(), MainActivity.class);
             startActivity(intent);
         });
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        mBinding = null;
     }
 }
