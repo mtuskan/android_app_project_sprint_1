@@ -16,6 +16,7 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentLoginBinding;
+import static edu.tacoma.uw.projectsprint1_group9.RegisterFragment.registeredTag;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -93,23 +94,24 @@ public class LoginFragment extends Fragment {
                     try {
                         String result = (String) response.get("result");
                         if (result.equals("success")) {
-                            Toast.makeText(this.getContext(), "User logged in", Toast.LENGTH_LONG).show();
-                            SharedPreferences sharedPreferences = getActivity().getSharedPreferences(getString(R.string.LOGIN_PREFS)
-                                    , Context.MODE_PRIVATE);
-                            sharedPreferences.edit().putBoolean(getString(R.string.LOGGEDIN), true)
-                                    .commit();
-                            //start intent to go to mainActivity
-                            Intent intent = new Intent(requireContext(), MainActivity.class);
-                            startActivity(intent);
+                            if (registeredTag) {
+                                Toast.makeText(this.getContext(), "User logged in", Toast.LENGTH_LONG).show();
+                                SharedPreferences sharedPreferences = getActivity().getSharedPreferences(getString(R.string.LOGIN_PREFS)
+                                        , Context.MODE_PRIVATE);
+                                sharedPreferences.edit().putBoolean(getString(R.string.LOGGEDIN), true)
+                                        .commit();
+                                Intent intent = new Intent(requireContext(), MainActivity.class);
+                                startActivity(intent);
+                            } else {
+                                registeredTag = true;
+                            }
                         } else {
                             Toast.makeText(this.getContext(), "User failed to authenticate", Toast.LENGTH_LONG).show();
-
                         }
                     } catch (JSONException e) {
                         Log.e("JSON Parse Error", e.getMessage());
                     }
                 }
-
             } else {
                 Log.d("JSON Response", "No Response");
             }

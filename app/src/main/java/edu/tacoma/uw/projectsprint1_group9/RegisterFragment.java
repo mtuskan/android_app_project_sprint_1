@@ -31,6 +31,8 @@ public class RegisterFragment extends Fragment {
     private FragmentRegisterBinding mBinding;
     private UserViewModel mUserViewModel;
 
+    public static Boolean registeredTag = true;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -92,7 +94,9 @@ public class RegisterFragment extends Fragment {
 
             } else {
                 Toast.makeText(this.getContext(),"User added", Toast.LENGTH_LONG).show();
-                Navigation.findNavController(getView()).popBackStack();
+                //Navigation.findNavController(getView()).popBackStack();
+                registeredTag = false;
+                navigateToLogin();
 
             }
 
@@ -100,6 +104,11 @@ public class RegisterFragment extends Fragment {
             Log.d("JSON Response", "No Response");
         }
 
+    }
+
+    public void navigateToLogin() {
+        Navigation.findNavController(getView())
+                .navigate(R.id.loginFragment);
     }
 
 
