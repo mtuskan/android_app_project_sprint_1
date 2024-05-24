@@ -5,6 +5,7 @@
     android:id="@+id/career_layout_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B7A57A"
     tools:context=".CareerFragment">
 
     <TextView
@@ -52,34 +53,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/careerInfo" />
 
-    <Button
-        android:id="@+id/home_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="95dp"
-        android:layout_marginBottom="66dp"
-        android:backgroundTint="#4B2E83"
-        android:fontFamily="sans-serif"
-        android:text="@string/home_button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="#FFFFFF"
-        app:strokeWidth="2dp"/>
-
-    <Button
-        android:id="@+id/back_to_resource"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="57dp"
-        android:layout_marginBottom="66dp"
-        android:backgroundTint="#4B2E83"
-        android:fontFamily="sans-serif"
-        android:text="@string/resources_button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:strokeColor="#FFFFFF"
-        app:strokeWidth="2dp"/>
-
     <TextView
         android:id="@+id/textViewIntro"
         android:layout_width="wrap_content"
@@ -125,12 +98,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="89dp"
-        android:layout_marginBottom="55dp"
         android:autoLink="web"
         android:clickable="true"
         android:focusable="true"
         android:text="@string/linkCareer"
-        app:layout_constraintBottom_toTopOf="@+id/home_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="543dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@
     android:id="@+id/club_root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B7A57A"
     tools:context=".ClubsFragment">
 
     <TextView
@@ -162,32 +163,5 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/home_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#4B2E83"
-        android:text="@string/home_button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="#FFFFFF"
-        app:strokeWidth="2dp"/>
-
-    <Button
-        android:id="@+id/back_to_resource"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#4B2E83"
-        android:text="@string/resources_button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:strokeColor="#FFFFFF"
-        app:strokeWidth="2dp"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

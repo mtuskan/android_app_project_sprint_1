@@ -24,25 +24,44 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * ViewModel for managing  feedback.
+ *
+ * @author Enrique Vargas
+ */
 public class ReviewViewModel extends AndroidViewModel {
     private MutableLiveData<JSONObject> mResponse;
-
     private MutableLiveData<List<Feedback>> mReviewsList;
 
+    /**
+     * Constructor for ReviewViewModel.
+     *
+     * @param application The application context.
+     */
     public ReviewViewModel(@NonNull Application application) {
         super(application);
         mResponse = new MutableLiveData<>();
         mResponse.setValue(new JSONObject());
         mReviewsList = new MutableLiveData<>();
         mReviewsList.setValue(new ArrayList<>());
-
     }
 
+    /**
+     * Add an observer to the response.
+     *
+     * @param owner    The LifecycleOwner.
+     * @param observer The observer.
+     */
     public void addResponseObserver(@NonNull LifecycleOwner owner,
                                     @NonNull Observer<? super JSONObject> observer) {
         mResponse.observe(owner, observer);
     }
 
+    /**
+     * Handle errors from Volley requests.
+     *
+     * @param error The VolleyError.
+     */
     private void handleError(final VolleyError error) {
         if (Objects.isNull(error.networkResponse)) {
             try {
@@ -65,6 +84,14 @@ public class ReviewViewModel extends AndroidViewModel {
             }
         }
     }
+
+    /**
+     * Add a review to the database.
+     *
+     * @param name     The name of the reviewer.
+     * @param year     The year of the review.
+     * @param feedback The feedback.
+     */
     public void addReview(String name, String year, String feedback) {
         String url = "https://students.washington.edu/enriquev/add_review.php";
         JSONObject body = new JSONObject();
@@ -93,11 +120,22 @@ public class ReviewViewModel extends AndroidViewModel {
                 .add(request);
     }
 
+    /**
+     * Add an observer to the feedback list.
+     *
+     * @param owner    The LifecycleOwner.
+     * @param observer The observer.
+     */
     public void addFeedbackListObserver(@NonNull LifecycleOwner owner,
                                         @NonNull Observer<? super List<Feedback>> observer) {
         mReviewsList.observe(owner, observer);
     }
 
+    /**
+     * Handle the result of the getReviews request.
+     *
+     * @param result The JSON result.
+     */
     private void handleResult(final JSONObject result) {
         try {
             String data = result.getString("review");
@@ -115,41 +153,26 @@ public class ReviewViewModel extends AndroidViewModel {
         mReviewsList.setValue(mReviewsList.getValue());
     }
 
+    /**
+     * Get reviews from the database.
+     */
     public void getReviews() {
-
-        String url =
-
-                "https://students.washington.edu/enriquev/get_reviews.php";
+        String url = "https://students.washington.edu/enriquev/get_reviews.php";
 
         Request request = new JsonObjectRequest(
-
                 Request.Method.GET,
-
                 url,
-
                 null, //no body for this get request
-
                 this::handleResult,
-
                 this::handleError);
 
-
-
         request.setRetryPolicy(new DefaultRetryPolicy(
-
                 10_000,
-
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
         //Instantiate the RequestQueue and add the request to the queue
-
         Volley.newRequestQueue(getApplication().getApplicationContext())
-
                 .add(request);
-
     }
-
-
 }

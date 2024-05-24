@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.Navigation;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,20 +18,35 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentAddFeedbacksBinding;
 
 /**
- * create an instance of this fragment.
+ * A fragment that allows users to add feedback for the app
+ *
+ * @author Enrique Vargas
  */
 public class AddFeedbacksFragment extends Fragment {
-
+    /**
+     * Binding object instance corresponding to the fragment_add_feedbacks.xml layout.
+     */
     private FragmentAddFeedbacksBinding mBinding;
-
+    /**
+     * ViewModel instance to handle the business logic for adding feedback.
+     */
     private ReviewViewModel reviewViewModel;
 
+    /**
+     * Inflates the layout for this fragment and initializes the ViewModel.
+     *
+     * @param inflater           The LayoutInflater inflate any views in the fragment.
+     * @param container          If non-null, this is the parent view that the fragment's UI should be attached to.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed from a previous saved state as given here.
+     * @return The root view for the fragment's UI.
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -43,6 +57,12 @@ public class AddFeedbacksFragment extends Fragment {
     }
     @Override
 
+    /**
+     * Called immediately after onCreateView has returned, but before any saved state has been restored in to the view.
+     *
+     * @param view               The View returned by onCreateView.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed from a previous saved state as given here.
+     */
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
 
@@ -62,9 +82,12 @@ public class AddFeedbacksFragment extends Fragment {
             startActivity(intent);
         });
 
-//        mBinding.viewFeedbackButton.setOnClickListener(button -> navToFeedbackList());
     }
 
+    /**
+     * Processes the addition of feedback by retrieving input data, validating it,
+     * and calling the ViewModel to add the feedback.
+     */
     private void processAddFeedback() {
 
         final String name = mBinding.editTextName.getText().toString();
@@ -84,12 +107,9 @@ public class AddFeedbacksFragment extends Fragment {
 
     }
 
-//    private void navToFeedbackList() {
-//
-//        Navigation.findNavController(getView())
-//                .navigate(R.id.action_addFeedbacksFragment_to_feedbackListFragment);
-//    }
-
+    /**
+     * Cleans up resources associated with the view.
+     */
     @Override
     public void onDestroyView() {
 
@@ -97,6 +117,11 @@ public class AddFeedbacksFragment extends Fragment {
         mBinding = null;
     }
 
+    /**
+     * Observes the response from adding feedback and shows appropriate messages to the user.
+     *
+     * @param response The JSON response from the ViewModel.
+     */
     private void observeResponse(final JSONObject response) {
 
         if (response.length() > 0) {

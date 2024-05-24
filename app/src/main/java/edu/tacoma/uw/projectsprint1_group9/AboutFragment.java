@@ -77,8 +77,10 @@ public class AboutFragment extends Fragment {
         enriqueEmailAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri webpage = Uri.parse("mailto:enriquev@uw.edu");
-                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:enriquev@uw.edu"));
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Contact about UW app");
+                intent.putExtra(Intent.EXTRA_TEXT, "Can you create a similar app for my business?");
                 startActivity(intent);
             }
         });
