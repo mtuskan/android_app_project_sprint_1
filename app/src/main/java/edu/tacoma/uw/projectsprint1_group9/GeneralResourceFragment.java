@@ -62,18 +62,18 @@ public class GeneralResourceFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Set up the back button to navigate back to ResourcesActivity
-        Button backButton = view.findViewById(R.id.back_to_resource);
-        backButton.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), ResourcesActivity.class);
-            startActivity(intent);
-        });
+//        // Set up the back button to navigate back to ResourcesActivity
+//        Button backButton = view.findViewById(R.id.back_to_resource);
+//        backButton.setOnClickListener(v -> {
+//            Intent intent = new Intent(requireContext(), ResourcesActivity.class);
+//            startActivity(intent);
+//        });
 
         // Set up the home button to navigate back to MainActivity
-        Button homeButton = view.findViewById(R.id.home_button);
-        homeButton.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), MainActivity.class);
-            startActivity(intent);
-        });
+//        Button homeButton = view.findViewById(R.id.home_button);
+//        homeButton.setOnClickListener(v -> {
+//            Intent intent = new Intent(requireContext(), MainActivity.class);
+//            startActivity(intent);
+//        });
     }
 }

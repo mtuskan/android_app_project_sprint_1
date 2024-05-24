@@ -82,7 +82,7 @@
         android:layout_marginTop="84dp"
         android:layout_marginEnd="152dp"
         android:src="@mipmap/uwlogo_foreground"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
+        app:layout_constraintBottom_toTopOf="@+id/editTextUsername"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
