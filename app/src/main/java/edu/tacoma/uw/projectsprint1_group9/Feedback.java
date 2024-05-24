@@ -37,6 +37,7 @@ public class Feedback implements Serializable {
     public void setFeedback(String feedback) {
         mFeedback = feedback;
     }
+
     public String getFeedback() {
         return mFeedback;
     }
