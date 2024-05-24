@@ -25,10 +25,10 @@
         android:fontFamily="sans-serif"
         android:text="@string/resources"
         android:textColorLink="#4B2E83"
-        app:layout_constraintEnd_toEndOf="@+id/DawgsTeCCSuportTextView"
+        app:layout_constraintEnd_toEndOf="@+id/DawgsTeCSSuportTextView"
         app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="@+id/DawgsTeCCSuportTextView"
-        app:layout_constraintTop_toBottomOf="@+id/DawgsTeCCSuportTextView"
+        app:layout_constraintStart_toStartOf="@+id/DawgsTeCSSuportTextView"
+        app:layout_constraintTop_toBottomOf="@+id/DawgsTeCSSuportTextView"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
 
@@ -60,12 +60,12 @@
         app:srcCompat="@mipmap/uwlogo_round" />
 
     <TextView
-        android:id="@+id/DawgsTeCCSuportTextView"
+        android:id="@+id/DawgsTeCSSuportTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="sans-serif"
-        android:text="@string/dawgsteccsupport"
+        android:text="@string/dawgstecssuport"
         android:textColor="#FFFFFF"
         android:textSize="27sp"
         android:textStyle="bold"
