@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,10 +33,26 @@ public class AboutFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Instantiate the Binding object and Inflate the layout for this fragment
-        mBinding = FragmentAboutBinding.inflate(inflater, container, false);
+//        // Instantiate the Binding object and Inflate the layout for this fragment
+//        mBinding = FragmentAboutBinding.inflate(inflater, container, false);
+//
+//        return mBinding.getRoot();
 
-        return mBinding.getRoot();
+
+        View view = inflater.inflate(R.layout.fragment_about, container, false);
+
+        view.findViewById(R.id.viewFeedbackButton).setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(view);
+            navController.navigate(R.id.action_navigation_about_to_feedbackListFragment);
+        });
+
+        view.findViewById(R.id.AddFeedbackButton).setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(view);
+            navController.navigate(R.id.action_navigation_about_to_addFeedbacksFragment);
+        });
+
+        return view;
+
     }
 
     public void onDestroyView() {
