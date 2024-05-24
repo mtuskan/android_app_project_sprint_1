@@ -29,12 +29,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:backgroundTint="#4B2E83"
-        android:fontFamily="@font/open_sans_light"
+        android:fontFamily="sans-serif"
         android:text="@string/viewButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ResourcesButton"
-        app:layout_constraintTop_toBottomOf="@+id/ResourcesButton" />
+        app:layout_constraintTop_toBottomOf="@+id/ResourcesButton"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp"/>
 
     <Button
         android:id="@+id/FeedbackButton"
@@ -42,12 +44,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:backgroundTint="#4B2E83"
-        android:fontFamily="@font/open_sans_light"
+        android:fontFamily="sans-serif"
         android:text="@string/feedback"
         app:layout_constraintEnd_toStartOf="@+id/viewFeedbackButton"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/HomeButton"
-        app:layout_constraintTop_toBottomOf="@+id/HomeButton" />
+        app:layout_constraintTop_toBottomOf="@+id/HomeButton"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp"/>
 
     <TextView
         android:id="@+id/DescriptionView"
@@ -134,7 +138,7 @@
         android:layout_marginEnd="78dp"
         android:layout_marginBottom="89dp"
         android:backgroundTint="#4B2E83"
-        android:fontFamily="@font/open_sans_light"
+        android:fontFamily="sans-serif"
         android:text="@string/resources_button_text"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -150,7 +154,7 @@
         android:layout_marginStart="78dp"
         android:layout_marginBottom="89dp"
         android:backgroundTint="#4B2E83"
-        android:fontFamily="@font/open_sans_light"
+        android:fontFamily="sans-serif"
         android:text="@string/home_button_text"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"

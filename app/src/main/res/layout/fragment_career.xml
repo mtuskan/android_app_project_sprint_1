@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
-        android:fontFamily="@font/open_sans_light"
+        android:fontFamily="sans-serif"
         android:text="@string/career_description_textview"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -43,9 +43,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="95dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="73dp"
-        android:fontFamily="@font/open_sans_light"
+        android:fontFamily="sans-serif"
         android:text="@string/career_bulleted_list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -59,10 +59,12 @@
         android:layout_marginStart="95dp"
         android:layout_marginBottom="66dp"
         android:backgroundTint="#4B2E83"
-        android:fontFamily="@font/open_sans_light"
+        android:fontFamily="sans-serif"
         android:text="@string/home_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp"/>
 
     <Button
         android:id="@+id/back_to_resource"
@@ -71,10 +73,12 @@
         android:layout_marginEnd="57dp"
         android:layout_marginBottom="66dp"
         android:backgroundTint="#4B2E83"
-        android:fontFamily="@font/open_sans_light"
+        android:fontFamily="sans-serif"
         android:text="@string/resources_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp"/>
 
     <TextView
         android:id="@+id/textViewIntro"

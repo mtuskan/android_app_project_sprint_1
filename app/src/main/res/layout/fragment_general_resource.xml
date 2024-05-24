@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="396dp"
+        android:layout_marginTop="356dp"
         android:fontFamily="@font/encode_sans_condensed_black"
         android:text="@string/links"
         android:textColor="#4B2E83"
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:fontFamily="@font/open_sans_light"
+        android:fontFamily="sans-serif"
         android:text="@string/resource_description_textview"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -73,7 +73,9 @@
         android:backgroundTint="#4B2E83"
         android:text="@string/home_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp"/>
 
     <Button
         android:id="@+id/back_to_resource"
@@ -84,14 +86,16 @@
         android:backgroundTint="#4B2E83"
         android:text="@string/resources_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp"/>
 
     <TextView
         android:id="@+id/resource_topic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/open_sans_light"
+        android:fontFamily="sans-serif"
         android:lineSpacingExtra="8sp"
         android:text="@string/resource_list"
         android:textAlignment="textStart"
@@ -107,7 +111,7 @@
         android:layout_marginStart="26dp"
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="8dp"
-        android:fontFamily="@font/open_sans_light"
+        android:fontFamily="sans-serif"
         android:lineSpacingExtra="10sp"
         android:text="@string/links_to_resources"
         android:autoLink="web"

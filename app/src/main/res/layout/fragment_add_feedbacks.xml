@@ -18,7 +18,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.84"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="sans-serif"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp"/>
 
     <EditText
         android:id="@+id/editTextName"
@@ -105,12 +108,14 @@
         android:layout_marginEnd="161dp"
         android:layout_marginBottom="52dp"
         android:backgroundTint="#4B2E83"
-        android:fontFamily="@font/open_sans_light"
+        android:fontFamily="sans-serif"
         android:text="@string/home_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
