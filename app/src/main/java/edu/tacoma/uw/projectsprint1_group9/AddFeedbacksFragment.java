@@ -76,11 +76,11 @@ public class AddFeedbacksFragment extends Fragment {
 
         mBinding.buttonAddFeedback.setOnClickListener(button -> processAddFeedback());
 
-        Button homeButton = view.findViewById(R.id.HomeButton);
-        homeButton.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), MainActivity.class);
-            startActivity(intent);
-        });
+//        Button homeButton = view.findViewById(R.id.HomeButton);
+//        homeButton.setOnClickListener(v -> {
+//            Intent intent = new Intent(requireContext(), MainActivity.class);
+//            startActivity(intent);
+//        });
 
     }
 

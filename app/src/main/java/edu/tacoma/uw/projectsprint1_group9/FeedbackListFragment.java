@@ -84,11 +84,11 @@ public class FeedbackListFragment extends Fragment {
         });
 
         // Set up the Home button to navigate back to the MainActivity
-        Button homeButton = view.findViewById(R.id.HomeButton);
-        homeButton.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), MainActivity.class);
-            startActivity(intent);
-        });
+//        Button homeButton = view.findViewById(R.id.HomeButton);
+//        homeButton.setOnClickListener(v -> {
+//            Intent intent = new Intent(requireContext(), MainActivity.class);
+//            startActivity(intent);
+//        });
     }
 
     /**

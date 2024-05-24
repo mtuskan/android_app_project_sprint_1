@@ -65,7 +65,7 @@ public class CareerFragment extends Fragment {
 //            Intent intent = new Intent(requireContext(), ResourcesActivity.class);
 //            startActivity(intent);
 //        });
-
+//
 //        Button homeButton = view.findViewById(R.id.home_button);
 //        homeButton.setOnClickListener(v -> {
 //            Intent intent = new Intent(requireContext(), MainActivity.class);
