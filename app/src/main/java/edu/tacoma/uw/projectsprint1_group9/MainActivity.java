@@ -23,6 +23,10 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+/**
+ * Main Activity Class - Contains bottom navigation, top menu navigation, logcat functions
+ *
+ */
 public class MainActivity extends AppCompatActivity {
 
 //    private SharedPreferences mSharedPreferences;

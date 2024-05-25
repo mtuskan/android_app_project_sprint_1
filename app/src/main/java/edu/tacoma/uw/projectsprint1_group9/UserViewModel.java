@@ -16,6 +16,10 @@ import org.json.JSONObject;
 import java.nio.charset.Charset;
 import java.util.Objects;
 
+/**
+ * User View Model Class - a view model for users
+ *
+ */
 public class UserViewModel extends AndroidViewModel {
     private MutableLiveData<JSONObject> mResponse;
 

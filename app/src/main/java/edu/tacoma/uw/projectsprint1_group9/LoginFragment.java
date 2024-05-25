@@ -19,7 +19,7 @@ import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentLoginBinding;
 import static edu.tacoma.uw.projectsprint1_group9.RegisterFragment.registeredTag;
 
 /**
- * A simple {@link Fragment} subclass.
+ * Login Fragment Class - {@link Fragment} subclass. Login a User into application
  */
 public class LoginFragment extends Fragment {
 
