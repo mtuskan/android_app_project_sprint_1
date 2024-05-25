@@ -1,4 +1,5 @@
 package edu.tacoma.uw.projectsprint1_group9;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -8,11 +9,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -23,16 +22,12 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-/**
- * Main Activity Class - Contains bottom navigation, top menu navigation, logcat functions
- *
- */
 public class MainActivity extends AppCompatActivity {
 
-//    private SharedPreferences mSharedPreferences;
     private final static String TAG = "MainActivity";
 
     private AppBarConfiguration mAppBarConfiguration;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +41,7 @@ public class MainActivity extends AppCompatActivity {
         });
         Log.i(TAG, "MainActivity's onCreate");
 
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+        BottomNavigationView navView = findViewById(R.id.bottom_nav_view);
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_resource, R.id.navigation_about)
                 .build();
@@ -57,6 +50,25 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = navHostFragment.getNavController();
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+        navController.navigate(R.id.navigation_home);
+        // Add this block to use popBackStack on navigation item selection
+        navView.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.navigation_home) {
+                navController.popBackStack(R.id.navigation_home, false);
+                navController.navigate(R.id.navigation_home);
+                return true;
+            } else if (itemId == R.id.navigation_resource) {
+                navController.popBackStack(R.id.navigation_resource, false);
+                navController.navigate(R.id.navigation_resource);
+                return true;
+            } else if (itemId == R.id.navigation_about) {
+                navController.popBackStack(R.id.navigation_about, false);
+                navController.navigate(R.id.navigation_about);
+                return true;
+            }
+            return false;
+        });
     }
 
     @Override
@@ -64,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
         return true;
-
     }
 
     @Override
@@ -79,13 +90,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
             finish();
             return true;
-        } else if (getOnBackPressedDispatcher().hasEnabledCallbacks()){
-            getOnBackPressedDispatcher().onBackPressed();
-            return true;
-        } else {
-            return super.onOptionsItemSelected(item);
         }
-
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -117,6 +123,4 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         Log.e(TAG, "MainActivity's onDestroy");
     }
-
-
 }
