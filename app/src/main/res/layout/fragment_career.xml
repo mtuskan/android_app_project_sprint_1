@@ -102,6 +102,7 @@
         android:clickable="true"
         android:focusable="true"
         android:text="@string/linkCareer"
+        android:textColorLink="#4B2E83"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintStart_toStartOf="@+id/textViewMoreInfo"

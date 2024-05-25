@@ -91,6 +91,7 @@
         android:fontFamily="sans-serif"
         android:lineSpacingExtra="10sp"
         android:text="@string/links_to_resources"
+        android:textColorLink="#4B2E83"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
