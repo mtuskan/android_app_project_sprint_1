@@ -99,6 +99,5 @@
     <string name="LOGGEDIN">loggedin</string>
 
     <string name="action_logout">logout</string>
-    <string name="dawgsteccsupport">DawgsTeCCSupport</string>
     <string name="welcometext">Welcome Student!</string>
 </resources>

@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = navHostFragment.getNavController();
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
-
+        navController.navigate(R.id.navigation_home);
         // Add this block to use popBackStack on navigation item selection
         navView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
