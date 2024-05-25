@@ -26,8 +26,6 @@ import java.util.Objects;
 
 /**
  * ViewModel for managing and handling feedback reviews.
- *
- * @author Enrique Vargas
  */
 public class ReviewViewModel extends AndroidViewModel {
     private MutableLiveData<JSONObject> mResponse;
@@ -140,16 +138,13 @@ public class ReviewViewModel extends AndroidViewModel {
         try {
             String data = result.getString("review");
             JSONArray arr = new JSONArray(data);
-            List<Feedback> currentList = mReviewsList.getValue();
-            if (currentList == null) {
-                currentList = new ArrayList<>();
-            }
+            List<Feedback> newList = new ArrayList<>();
             for (int i = 0; i < arr.length(); i++) {
                 JSONObject obj = arr.getJSONObject(i);
                 Feedback review = new Feedback(obj.getString(Feedback.NAME), obj.getString(Feedback.YEAR), obj.getString(Feedback.FEEDBACK));
-                currentList.add(review);
+                newList.add(review);
             }
-            mReviewsList.setValue(currentList);
+            mReviewsList.setValue(newList);
         } catch (JSONException e) {
             e.printStackTrace();
             Log.e("ERROR!", e.getMessage());
@@ -178,3 +173,4 @@ public class ReviewViewModel extends AndroidViewModel {
                 .add(request);
     }
 }
+

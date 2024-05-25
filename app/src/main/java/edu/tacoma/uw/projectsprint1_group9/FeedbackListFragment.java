@@ -83,6 +83,8 @@ public class FeedbackListFragment extends Fragment {
             }
         });
 
+        mModel.getReviews();
+
         // Set up the Home button to navigate back to the MainActivity
 //        Button homeButton = view.findViewById(R.id.HomeButton);
 //        homeButton.setOnClickListener(v -> {
