@@ -67,8 +67,10 @@ public class AboutFragment extends Fragment {
         jamesEmailAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri webpage = Uri.parse("mailto:jjl336@uw.edu");
-                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:jjl336@uw.edu" +
+                        "?subject=" + Uri.encode("Info about app") +
+                        "&body=" + Uri.encode("How did you design logo")));
                 startActivity(intent);
             }
         });
@@ -78,9 +80,9 @@ public class AboutFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("mailto:enriquev@uw.edu"));
-                intent.putExtra(Intent.EXTRA_SUBJECT, "Contact about UW app");
-                intent.putExtra(Intent.EXTRA_TEXT, "Can you create a similar app for my business?");
+                intent.setData(Uri.parse("mailto:enriquev@uw.edu" +
+                        "?subject=" + Uri.encode("Can you create a similar app for my business?") +
+                        "&body=" + Uri.encode("Contact about UW app")));
                 startActivity(intent);
             }
         });
@@ -89,8 +91,10 @@ public class AboutFragment extends Fragment {
         michaelEmailAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri webpage = Uri.parse("mailto:mtuskan@uw.edu");
-                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:mtuskan@uw.edu" +
+                        "?subject=" + Uri.encode("Splash page ") +
+                        "&body=" + Uri.encode("How did you create the splash page?")));
                 startActivity(intent);
             }
         });
