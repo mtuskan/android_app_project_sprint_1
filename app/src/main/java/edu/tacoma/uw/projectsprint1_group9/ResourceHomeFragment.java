@@ -1,5 +1,7 @@
 package edu.tacoma.uw.projectsprint1_group9;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -46,6 +48,15 @@ public class ResourceHomeFragment extends Fragment {
             NavController navController = Navigation.findNavController(view);
             navController.navigate(R.id.action_navigation_resource_to_clubsFragment);
         });
+
+        view.findViewById(R.id.buttonLeetCode).setOnClickListener(v -> {
+            // Create an Intent to open a web browser
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://leetcode.com/"));
+
+            // Start the activity
+            view.getContext().startActivity(browserIntent);
+        });
+
 
         return view;
     }
