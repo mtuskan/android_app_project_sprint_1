@@ -75,8 +75,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
             finish();
             return true;
+        } else if (getOnBackPressedDispatcher().hasEnabledCallbacks()){
+            getOnBackPressedDispatcher().onBackPressed();
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
 
     }
 

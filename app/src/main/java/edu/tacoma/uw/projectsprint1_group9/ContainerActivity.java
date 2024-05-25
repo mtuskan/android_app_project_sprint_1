@@ -10,7 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
 
+/**
+ * Container Activity Class - routes view to login fragment using a container.
+ */
 public class ContainerActivity extends AppCompatActivity {
     private SharedPreferences mSharedPreferences;
     @Override
