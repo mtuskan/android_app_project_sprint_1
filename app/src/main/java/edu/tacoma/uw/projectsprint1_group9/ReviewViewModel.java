@@ -24,6 +24,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Review View Model Class - a view model class for application reviews
+ *
+ */
 public class ReviewViewModel extends AndroidViewModel {
     private MutableLiveData<JSONObject> mResponse;
 

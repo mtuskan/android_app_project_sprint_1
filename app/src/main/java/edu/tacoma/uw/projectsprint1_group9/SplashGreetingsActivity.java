@@ -27,7 +27,7 @@ public class SplashGreetingsActivity extends AppCompatActivity {
         fadeOut.setInterpolator(new AccelerateInterpolator());
         fadeOut.setStartOffset(500);
         fadeOut.setDuration(7500);
-        ImageView image = findViewById(R.id.dawgsImageView);
+        ImageView image = findViewById(R.id.dawgsLogo);
         image.setAnimation(fadeOut);
         TextView image2 = findViewById(R.id.helloTextView);
         image2.setAnimation(fadeOut);

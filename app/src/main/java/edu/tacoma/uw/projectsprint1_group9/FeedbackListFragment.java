@@ -14,7 +14,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentFeedbackListBinding;
-
+/**
+ * Feedback List Fragment Class - List of Feedback objects
+ *
+ */
 public class FeedbackListFragment extends Fragment {
 
     private ReviewViewModel mModel;

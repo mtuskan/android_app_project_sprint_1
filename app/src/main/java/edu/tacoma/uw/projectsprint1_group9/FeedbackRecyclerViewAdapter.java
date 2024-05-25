@@ -11,7 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentFeedbackBinding;
-
+/**
+ * Feedback RecyclerView Adapter Class - Recyclerview Adapter for Feedback objects
+ *
+ */
 public class FeedbackRecyclerViewAdapter extends RecyclerView.Adapter<FeedbackRecyclerViewAdapter.ViewHolder> {
     private final List<Feedback> mValues;
 

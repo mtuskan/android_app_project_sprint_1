@@ -24,7 +24,7 @@ import java.util.zip.Inflater;
 import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentRegisterBinding;
 
 /**
- * A simple {@link Fragment} subclass.
+ * Register Fragment Class {@link Fragment} subclass. Register a User to vergil database
  */
 public class RegisterFragment extends Fragment {
 

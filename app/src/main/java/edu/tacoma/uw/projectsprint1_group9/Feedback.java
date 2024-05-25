@@ -2,6 +2,10 @@ package edu.tacoma.uw.projectsprint1_group9;
 
 import java.io.Serializable;
 
+/**
+ * Feedback Class - Feedback object with Name, Year and Feedback instances
+ *
+ */
 public class Feedback implements Serializable {
 
     private String mNames;

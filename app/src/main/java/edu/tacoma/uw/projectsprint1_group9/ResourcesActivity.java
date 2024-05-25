@@ -11,6 +11,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/**
+ * Resources Activity Class - Activity for Student Resources
+ *
+ */
 public class ResourcesActivity extends AppCompatActivity {
 
     @Override

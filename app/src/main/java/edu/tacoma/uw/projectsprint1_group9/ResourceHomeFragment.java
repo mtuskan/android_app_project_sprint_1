@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import edu.tacoma.uw.projectsprint1_group9.databinding.FragmentResourceHomeBinding;
 
 /**
- * A simple {@link Fragment} subclass.
+ * Resource Home Fragment Class {@link Fragment} subclass. Fragment for student resources
  */
 public class ResourceHomeFragment extends Fragment {
 
